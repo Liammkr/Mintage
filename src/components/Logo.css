@@ -1,0 +1,8 @@
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 5px;
+  cursor: pointer;
+}
