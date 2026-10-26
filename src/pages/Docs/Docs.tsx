@@ -2,7 +2,7 @@ import { LogoImg } from "../../components/Logo";
 import "./Docs.css";
 
 function Docs() {
-  const supportedCoins = [
+  /*const supportedCoins = [
     "sol",
     "ltc",
     "btc",
@@ -18,7 +18,7 @@ function Docs() {
     "ton",
     "dash",
     "dgb",
-  ];
+  ];*/
   return (
     <>
       <div className="pageWrap">

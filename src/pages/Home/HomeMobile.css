@@ -1,0 +1,201 @@
+@media (max-width: 1200px) {
+  body .titleText,
+  body .zeroLogText {
+    font-size: 64px;
+  }
+  body .paymentCard {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+  body .fourRight {
+    flex: 1;
+    min-width: 0;
+  }
+  body .checkoutBorder {
+    width: 100%;
+  }
+  body .zeroLogDescription {
+    width: auto;
+    max-width: 700px;
+  }
+  body .footerGrid {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  body .sectionOne,
+  body .fourWrap {
+    flex-direction: column;
+  }
+  body .leftSide,
+  body .rightSide,
+  body .fourLeft {
+    width: 100%;
+  }
+  body .rightSide {
+    margin-top: 40px;
+  }
+  body .paymentCard {
+    max-width: none;
+  }
+  body .fourLeft p {
+    padding-right: 0 !important;
+  }
+  body .fourRight {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    margin: 0;
+  }
+  body .pageWrap {
+    width: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  body .topBarBetween {
+    gap: 6px;
+  }
+  body .docsStyle {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  body .sectionOne {
+    margin-top: 32px;
+  }
+  body .titleText,
+  body .zeroLogText {
+    font-size: clamp(36px, 11vw, 56px);
+    line-height: 1.1;
+  }
+  body .titleText {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+  body .descriptionText {
+    font-size: 16px;
+  }
+  body .sectionOneButtons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  body .createAccountSectionOne,
+  body .docsButtonSectionOne {
+    width: 100%;
+    height: 48px;
+  }
+
+  body .coinsSupportedText {
+    font-size: 18px;
+  }
+  body .supportedCoinRoundAbout {
+    --gap: 24px;
+  }
+
+  body .fourLeft h1 {
+    font-size: 28px;
+  }
+  body .checkoutBorder {
+    height: 220px;
+  }
+
+  body .sectionSix {
+    margin-top: 64px;
+  }
+  body .outerWrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  body .footerGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 16px;
+    width: 100%;
+  }
+  body .titlefoot {
+    font-size: 14px;
+  }
+  body .tittleunder {
+    font-size: 14px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  body .completeBottom {
+    flex-direction: column;
+    font-size: 12px;
+    padding-bottom: 16px;
+  }
+  body .completeBottom p {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  body .mainContent {
+    flex-direction: column;
+    margin-top: 24px;
+  }
+  body .docsLeftSide,
+  body .mainbubble,
+  body .bubbleside {
+    width: auto;
+  }
+  body .mainbubble {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+  body .bubbleside {
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  body .tableKeyList {
+    display: none;
+  }
+  body .table {
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 12px;
+    row-gap: 6px;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 13px;
+  }
+  body .table > :nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+    font-weight: 500;
+  }
+  body .table > :nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+    color: #454d5e;
+  }
+  body .table > :nth-child(3) {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    font-weight: 500;
+  }
+  body .table > :nth-child(4) {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+    padding: 2px 6px;
+    font-size: 12px;
+  }
+}
+
+@media (hover: none) {
+  body .coinItem:hover {
+    transform: none;
+  }
+}
