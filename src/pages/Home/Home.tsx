@@ -149,6 +149,51 @@ function Home() {
             </div>
           </div>
         </div>
+        <div className="sectionThree">
+          <h1 className="zeroLogText">
+            <span style={{ color: "rgb(129, 112, 240)" }}>Zero</span> log policy
+          </h1>
+          <div className="descriptionWrapper">
+            <p className="zeroLogDescription">
+              Mintage never tracks any of your personal information. When
+              signing up, all you recieve is an account number. We will never
+              ask for any personal information such as your name, email adress,
+              or phone number.
+            </p>
+          </div>
+        </div>
+        <div className="sectionFour">
+          <div className="outerWrap">
+            <LogoImg></LogoImg>
+            <div className="footerGrid">
+              <div className="footerPiece">
+                <h1 className="titlefoot">Product</h1>
+                <p className="tittleunder">Payments</p>
+                <p className="tittleunder">Supported coins</p>
+                <p className="tittleunder">Log policy</p>
+                <p className="tittleunder">Privacy and terms</p>
+              </div>
+              <div className="footerPiece">
+                <h1 className="titlefoot">Developer</h1>
+                <p className="tittleunder">API cocs</p>
+                <p className="tittleunder">Webhooks</p>
+                <p className="tittleunder">Invoices</p>
+              </div>
+              <div className="footerPiece">
+                <h1 className="titlefoot">Account</h1>
+                <p className="tittleunder">Log in</p>
+                <p className="tittleunder">Create account</p>
+              </div>
+            </div>
+          </div>
+          <div className="completeBottom">
+            <p>© 2026 Mintage</p>
+            <p>
+              Network fees vary between network and are never collected by
+              Mintage
+            </p>
+          </div>
+        </div>
       </div>
     </>
   );
