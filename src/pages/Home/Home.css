@@ -256,15 +256,15 @@
 }
 .tittleunder {
   display: block;
-  font-size: 13px;
+  font-size: 11px;
   cursor: pointer;
 }
 .titlefoot {
-  font-size: 15px;
+  font-size: 13px;
 }
 .footerGrid {
   display: flex;
-  gap: 50px;
+  gap: 120px;
   justify-content: right;
 }
 .completeBottom {
