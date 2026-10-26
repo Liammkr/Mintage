@@ -1,4 +1,4 @@
-import { LogoAndName, LogoImg } from "../../components/Logo";
+import { LogoImg } from "../../components/Logo";
 import { StatusComplete } from "../../components/Status";
 import { CoinLogo } from "../../components/CoinLogos";
 import "./Home.css";
