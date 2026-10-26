@@ -1,0 +1,25 @@
+.coinLogo {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.coinBadge {
+  position: absolute;
+  right: -4px;
+  bottom: -4px;
+  display: flex;
+  border-radius: 50%;
+  background: #fff;
+  padding: 1px;
+}
+
+.coinFallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e5e5e5;
+  font-size: 10px;
+  font-weight: 600;
+}

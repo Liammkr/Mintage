@@ -36,6 +36,23 @@ function Home() {
       status: "Confirmed",
     },
   ];
+  const supportedCoins = [
+    "sol",
+    "ltc",
+    "btc",
+    "eth",
+    "pol",
+    "bnb",
+    "bch",
+    "doge",
+    "eth_arb",
+    "eth_op",
+    "avax",
+    "trx",
+    "ton",
+    "dash",
+    "dgb",
+  ];
   return (
     <>
       <div className="pageWrap">
@@ -106,7 +123,7 @@ function Home() {
                 <div className="table">
                   <span>{p.description}</span>
                   <span className="coinColumn">
-                    <CoinLogo coin={p.coin} />
+                    <CoinLogo coin={p.coin} size={20} />
                     {p.coin}
                   </span>
                   <span>{p.amount}</span>
@@ -116,7 +133,22 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="sectionTwo"></div>
+        <div className="sectionTwo">
+          <p className="coinsSupportedText">Accept a variety of coins.</p>
+          <div className="supportedCoinRoundAbout">
+            <div className="coinTrack">
+              {[...supportedCoins, ...supportedCoins].map((c, i) => (
+                <div
+                  key={i}
+                  className="coinItem"
+                  aria-hidden={i >= supportedCoins.length}
+                >
+                  <CoinLogo coin={c} size={50} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

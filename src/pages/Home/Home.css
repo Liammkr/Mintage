@@ -147,4 +147,84 @@
 .coinColumn {
   align-items: center;
   display: flex;
+  gap: 4px;
+}
+/*section2*/
+.sectionTwo {
+  margin-top: 50px;
+}
+.supportedCoinRoundAbout {
+  display: flex;
+  justify-content: space-between;
+}
+.coinsSupportedText {
+  font-size: 20px;
+  font-weight: 500;
+}
+.supportedCoinRoundAbout {
+  --gap: 32px;
+  --speed: 25s;
+
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 10%,
+    #000 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 10%,
+    #000 90%,
+    transparent
+  );
+}
+
+.coinTrack {
+  display: flex;
+  width: max-content;
+  animation: coin-scroll var(--speed) linear infinite;
+}
+
+.coinItem {
+  flex-shrink: 0;
+  margin-right: var(--gap);
+}
+
+.supportedCoinRoundAbout:hover .coinTrack {
+  animation-play-state: paused;
+}
+
+@keyframes coin-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .coinTrack {
+    animation: none;
+  }
+}
+.supportedCoinRoundAbout {
+  padding-block: 12px;
+}
+
+.coinTrack:has(.coinItem:hover) {
+  animation-play-state: paused;
+}
+
+.coinItem {
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.coinItem:hover {
+  transform: scale(1.3);
 }
