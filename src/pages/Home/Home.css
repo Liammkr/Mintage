@@ -1,3 +1,4 @@
+/*Topbar*/
 .pageWrap {
   width: 85%;
   padding-left: 7.5%;
@@ -48,4 +49,102 @@
 }
 .createAccountButton:hover {
   background-color: rgb(42, 42, 42);
+}
+/*section1*/
+.sectionOne {
+  display: flex;
+  margin-top: 50px;
+}
+.leftSide {
+  width: 50%;
+}
+.rightSide {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.titleText {
+  font-size: 80px;
+}
+.descriptionText {
+  line-height: 1.5;
+  font-size: 18px;
+}
+.createAccountSectionOne {
+  background-color: rgb(129, 112, 240);
+  color: white;
+  width: 250px;
+  height: 50px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.createAccountSectionOne:hover {
+  background-color: rgb(100, 112, 240);
+}
+.sectionOneButtons {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+.docsButtonSectionOne {
+  background-color: white;
+  color: black;
+  width: 150px;
+  height: 50px;
+  border: 1px solid rgb(171, 171, 171);
+  border-radius: 10px;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.docsButtonSectionOne:hover {
+  background-color: rgb(246, 247, 249);
+}
+.paymentCard {
+  width: 500px;
+  border: 1px solid rgb(229, 231, 236);
+  border-radius: 10px;
+  height: 335px;
+}
+.tableTitle {
+  width: 100%;
+  font-weight: 450;
+}
+.tableKeyList {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  align-items: center;
+  font-size: 12px;
+  border-top: 1px solid rgb(229, 231, 236);
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 30px;
+  background-color: rgb(246, 247, 249);
+}
+.table {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  font-size: 12px;
+  border-top: 1px solid rgb(229, 231, 236);
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 50px;
+}
+.coinColumn {
+  align-items: center;
+  display: flex;
 }

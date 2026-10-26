@@ -1,8 +1,14 @@
 import "./Logo.css";
 export function LogoImg({ size = 30 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100">
-      <image href="/favicon.svg" width={"100%"} height={"100%"} />
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 100 100"
+      href="/"
+      style={{ cursor: "pointer" }}
+    >
+      <image href="/mintage_black.png" width={"100%"} height={"100%"} />
     </svg>
   );
 }
