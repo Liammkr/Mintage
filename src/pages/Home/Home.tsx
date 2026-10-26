@@ -59,7 +59,9 @@ function Home() {
         <div className="topBarWrap">
           <div className="topBarBetween">
             <LogoImg />
-            <span className="docsStyle">Docs</span>
+            <a className="docsStyle" href="/docs">
+              Docs
+            </a>
           </div>
           <div className="topBarBetween">
             <button className="docsStyle">Log In</button>

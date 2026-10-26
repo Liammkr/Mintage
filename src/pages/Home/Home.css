@@ -18,6 +18,7 @@
   gap: 10px;
 }
 .docsStyle {
+  text-decoration: none;
   color: #454d5e;
   font-size: 14px;
   border: 1px solid transparent;
