@@ -66,7 +66,7 @@ function Home() {
             <button className="createAccountButton">Create Account</button>
           </div>
         </div>
-        <div className="sectionOne">
+        <div className="sectionOne" id="Payments">
           <div className="leftSide">
             <h1 className="titleText">
               Crypto payents with{" "}
@@ -133,7 +133,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="sectionTwo">
+        <div className="sectionTwo" id="SupportedCoins">
           <p className="coinsSupportedText">Accept a variety of coins.</p>
           <div className="supportedCoinRoundAbout">
             <div className="coinTrack">
@@ -149,9 +149,10 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="sectionThree">
+        <div className="sectionThree" id="LogPolicy">
           <h1 className="zeroLogText">
-            <span style={{ color: "rgb(129, 112, 240)" }}>Zero</span> log policy
+            <span style={{ color: "rgb(129, 112, 240)" }}>Zero</span> log
+            policy.
           </h1>
           <div className="descriptionWrapper">
             <p className="zeroLogDescription">
@@ -163,29 +164,76 @@ function Home() {
           </div>
         </div>
         <div className="sectionFour">
+          <div className="fourWrap">
+            <div className="fourLeft">
+              <h1 style={{ marginTop: "0px" }}>Prebuilt checkout page.</h1>
+              <p style={{ paddingRight: "80px" }}>
+                Hosted by Mintage for easy setup. If you want to, directly
+                display the invoice in your code, there are infinite
+                possibilities for your own checkout pages.
+              </p>
+            </div>
+            <div className="fourRight">
+              <div className="checkoutBorder"></div>
+            </div>
+          </div>
+        </div>
+        <div className="sectionFive">
+          <h1 className="zeroLogText">
+            <span style={{ color: "rgb(129, 112, 240)" }}>0%</span> fees
+            forever.
+          </h1>
+          <div className="descriptionWrapper">
+            <p className="zeroLogDescription">
+              Mintage never collects any fees of any ammount. Blockchain fees
+              are unavoidable and can range from 0 to 30 cents. Mintage attempts
+              to reduce blockchain transactions by withdrawing in batches.
+            </p>
+          </div>
+        </div>
+        <div className="sectionSix">
           <div className="outerWrap">
             <LogoImg></LogoImg>
             <div className="footerGrid">
               <div className="footerPiece">
-                <h1 className="titlefoot">Product</h1>
-                <p className="tittleunder">Payments</p>
-                <p className="tittleunder">Supported coins</p>
-                <p className="tittleunder">Log policy</p>
-                <p className="tittleunder">Privacy and terms</p>
+                <h1 className="titlefoot">Home</h1>
+                <a className="tittleunder" href="/#Payments">
+                  Payments
+                </a>
+                <a className="tittleunder" href="/#SupportedCoins">
+                  Supported coins
+                </a>
+                <a className="tittleunder" href="/#LogPolicy">
+                  Log policy
+                </a>
+                <a className="tittleunder" href="/terms">
+                  Privacy and terms
+                </a>
               </div>
               <div className="footerPiece">
                 <h1 className="titlefoot">Developer</h1>
-                <p className="tittleunder">API cocs</p>
-                <p className="tittleunder">Webhooks</p>
-                <p className="tittleunder">Invoices</p>
+                <a className="tittleunder" href="/docs">
+                  API docs
+                </a>
+                <a className="tittleunder" href="/docs#Webhooks">
+                  Webhooks
+                </a>
+                <a className="tittleunder" href="/docs#Invoices">
+                  Invoices
+                </a>
               </div>
               <div className="footerPiece">
                 <h1 className="titlefoot">Account</h1>
-                <p className="tittleunder">Log in</p>
-                <p className="tittleunder">Create account</p>
+                <a className="tittleunder" href="/login">
+                  Log in
+                </a>
+                <a className="tittleunder" href="/signup">
+                  Create account
+                </a>
               </div>
             </div>
           </div>
+
           <div className="completeBottom">
             <p>© 2026 Mintage</p>
             <p>
