@@ -46,6 +46,9 @@
   body .fourRight {
     margin-top: 24px;
   }
+  body .docsRightSide {
+    padding: 24px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -87,6 +90,7 @@
   }
   body .createAccountSectionOne,
   body .docsButtonSectionOne {
+    box-sizing: border-box;
     width: 100%;
     height: 48px;
   }
@@ -153,6 +157,28 @@
   body .bubbleside {
     height: 40px;
     font-size: 14px;
+  }
+  body .docsLeftSide {
+    position: static;
+    align-self: stretch;
+    border-radius: 0;
+    margin-right: 0;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgb(229, 231, 236);
+  }
+  body .docsRightSide {
+    border: none;
+    padding: 0;
+  }
+  body .docsTitle {
+    font-size: 30px;
+  }
+  body .docsSection h2 {
+    font-size: 22px;
+  }
+  body .codeBlock pre {
+    font-size: 12px;
   }
 }
 

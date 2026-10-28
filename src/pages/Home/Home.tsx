@@ -100,7 +100,9 @@ function Home() {
                   <path d="m12 5 7 7-7 7"></path>
                 </svg>
               </button>
-              <button className="docsButtonSectionOne">Developer docs</button>
+              <a className="docsButtonSectionOne" href="/docs">
+                Developer docs
+              </a>
             </div>
           </div>
           <div className="rightSide">
@@ -218,10 +220,10 @@ function Home() {
                 <a className="tittleunder" href="/docs">
                   API docs
                 </a>
-                <a className="tittleunder" href="/docs#Webhooks">
+                <a className="tittleunder" href="/docs#webhooks">
                   Webhooks
                 </a>
-                <a className="tittleunder" href="/docs#Invoices">
+                <a className="tittleunder" href="/docs#invoices">
                   Invoices
                 </a>
               </div>

@@ -3,15 +3,19 @@
   margin-top: 50px;
 }
 .docsLeftSide {
-  width: 150px;
+  width: 20%;
   border-radius: 10px;
+  margin-right: 20px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
 }
 .bubbleside {
   height: 30px;
   text-align: center;
   border: 1px solid transparent;
   font-weight: 300;
-  width: 150px;
   font-size: 12px;
   text-align: left;
   align-items: center;
@@ -41,4 +45,154 @@
   display: flex;
   margin: 0px;
   height: 30px;
+}
+.docsRightSide {
+  border: 2px solid rgb(229, 231, 236);
+  width: 100%;
+  border-radius: 5px;
+  padding: 32px 40px;
+  min-width: 0;
+  margin-bottom: 50px;
+}
+.docsSection {
+  scroll-margin-top: 20px;
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid rgb(229, 231, 236);
+}
+.docsSection:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.docsTitle {
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.docsSection h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.docsSection h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+.docsSection p,
+.docsSection li {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #2b303b;
+}
+.docsSection li {
+  margin-bottom: 6px;
+}
+.docsSection a {
+  color: rgb(129, 112, 240);
+}
+.docsRightSide code {
+  font-family:
+    "Geist Mono Variable", ui-monospace, SFMono-Regular, Menlo, Consolas,
+    monospace;
+  font-size: 0.88em;
+  background-color: rgb(246, 247, 249);
+  border: 1px solid rgb(229, 231, 236);
+  border-radius: 5px;
+  padding: 1px 5px;
+  overflow-wrap: anywhere;
+}
+.docsNote {
+  border: 1px solid rgb(221, 216, 252);
+  background-color: rgb(244, 242, 254);
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+.endpoint {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.endpoint code {
+  font-size: 14px;
+}
+.method {
+  background-color: rgb(129, 112, 240);
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 3px 7px;
+  border-radius: 5px;
+}
+.codeBlock {
+  border: 1px solid rgb(229, 231, 236);
+  border-radius: 8px;
+  background-color: rgb(246, 247, 249);
+  overflow: hidden;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+.codeLabel {
+  font-size: 12px;
+  color: #454d5e;
+  background-color: white;
+  border-bottom: 1px solid rgb(229, 231, 236);
+  padding: 8px 14px;
+}
+.codeBlock pre {
+  margin: 0;
+  padding: 14px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.codeBlock code {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  overflow-wrap: normal;
+}
+.tableScroll {
+  overflow-x: auto;
+  border: 1px solid rgb(229, 231, 236);
+  border-radius: 8px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+.docsTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.docsTable th {
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: #454d5e;
+  background-color: rgb(246, 247, 249);
+  padding: 8px 12px;
+  white-space: nowrap;
+}
+.docsTable td {
+  border-top: 1px solid rgb(229, 231, 236);
+  padding: 10px 12px;
+  line-height: 1.5;
+  vertical-align: top;
+}
+.docsTable td:first-child {
+  white-space: nowrap;
+}
+.docsTable td:first-child code {
+  overflow-wrap: normal;
+}
+.coinCell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
