@@ -105,11 +105,16 @@ function Signup() {
                     cursor: "pointer",
                     marginBottom: "6px",
                   }}
-                  onClick={() =>
-                    navigator.clipboard.writeText(
-                      localStorage.getItem("user_id") ?? "",
-                    )
-                  }
+                  onClick={async () => {
+                    try {
+                      await navigator.clipboard.writeText(
+                        localStorage.getItem("user_id") ?? "",
+                      );
+                      toast.success("Copied!");
+                    } catch {
+                      toast.error("Couldn't copy");
+                    }
+                  }}
                 >
                   {(localStorage.getItem("user_id") ?? "").replace(
                     /(\d{5})(?=\d)/g,
