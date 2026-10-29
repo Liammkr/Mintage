@@ -10,13 +10,11 @@ import "./Signup.css";
 function Signup() {
   const [token, setToken] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
   const turnstileRef = useRef<TurnstileInstance>(null);
 
   const handleCreate = async () => {
     if (!token) return;
     setLoading(true);
-    setError(null);
 
     try {
       const res = await fetch("https://api.mintage.cc/create_user", {
