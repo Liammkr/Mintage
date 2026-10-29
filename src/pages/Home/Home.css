@@ -5,52 +5,7 @@
   padding-right: 7.5%;
   padding-top: 5px;
 }
-.topBarWrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 50px;
-}
-.topBarBetween {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-}
-.docsStyle {
-  text-decoration: none;
-  color: #454d5e;
-  font-size: 14px;
-  border: 1px solid transparent;
-  padding-left: 12px;
-  background-color: transparent;
-  padding-right: 12px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  border-radius: 7px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.docsStyle:hover {
-  background-color: rgb(238, 238, 238);
-  color: black;
-}
-.createAccountButton {
-  color: white;
-  font-size: 14px;
-  border: 1px solid transparent;
-  padding-left: 12px;
-  background-color: black;
-  padding-right: 12px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  border-radius: 7px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.createAccountButton:hover {
-  background-color: rgb(42, 42, 42);
-}
+
 /*section1*/
 .sectionOne {
   display: flex;
@@ -281,36 +236,4 @@
   margin-top: 50px;
   justify-content: center;
   scroll-margin-top: 100px;
-}
-/*footer/section6*/
-.sectionSix {
-  margin-top: 100px;
-  scroll-margin-top: 100px;
-}
-.tittleunder {
-  display: block;
-  font-size: 11px;
-  cursor: pointer;
-  color: black;
-  text-decoration: none;
-  padding-bottom: 11px;
-}
-.titlefoot {
-  font-size: 13px;
-}
-.footerGrid {
-  display: flex;
-  gap: 120px;
-  justify-content: right;
-}
-.completeBottom {
-  display: flex;
-  justify-content: space-between;
-  font-size: 11px;
-  margin-top: 10px;
-}
-.outerWrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }

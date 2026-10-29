@@ -1,0 +1,32 @@
+.sectionSix {
+  margin-top: 100px;
+  scroll-margin-top: 100px;
+}
+.tittleunder {
+  display: block;
+  font-size: 11px;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+  padding-bottom: 11px;
+}
+.titlefoot {
+  font-size: 13px;
+}
+.footerGrid {
+  display: flex;
+  gap: 120px;
+  justify-content: right;
+}
+.completeBottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.outerWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,10 +1,13 @@
-import { LogoImg } from "../../components/Logo";
+import { Footer } from "../../components/Footer";
 import { StatusComplete } from "../../components/Status";
 import { CoinLogo } from "../../components/CoinLogos";
+import { Header } from "../../components/Header";
 import "./Home.css";
 import "./HomeMobile.css";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+  const navigate = useNavigate();
   const payments = [
     {
       description: "Order #7821",
@@ -57,18 +60,7 @@ function Home() {
   return (
     <>
       <div className="pageWrap">
-        <div className="topBarWrap">
-          <div className="topBarBetween">
-            <LogoImg />
-            <a className="docsStyle" href="/docs">
-              Docs
-            </a>
-          </div>
-          <div className="topBarBetween">
-            <button className="docsStyle">Log In</button>
-            <button className="createAccountButton">Create Account</button>
-          </div>
-        </div>
+        <Header></Header>
         <div className="sectionOne" id="Payments">
           <div className="leftSide">
             <h1 className="titleText">
@@ -82,7 +74,10 @@ function Home() {
               Sign up without any personal information.
             </p>
             <div className="sectionOneButtons">
-              <button className="createAccountSectionOne">
+              <button
+                className="createAccountSectionOne"
+                onClick={() => navigate("/signup")}
+              >
                 Create your account now{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -196,57 +191,7 @@ function Home() {
             </p>
           </div>
         </div>
-        <div className="sectionSix">
-          <div className="outerWrap">
-            <LogoImg></LogoImg>
-            <div className="footerGrid">
-              <div className="footerPiece">
-                <h1 className="titlefoot">Home</h1>
-                <a className="tittleunder" href="/#Payments">
-                  Payments
-                </a>
-                <a className="tittleunder" href="/#SupportedCoins">
-                  Supported coins
-                </a>
-                <a className="tittleunder" href="/#LogPolicy">
-                  Log policy
-                </a>
-                <a className="tittleunder" href="/terms">
-                  Privacy and terms
-                </a>
-              </div>
-              <div className="footerPiece">
-                <h1 className="titlefoot">Developer</h1>
-                <a className="tittleunder" href="/docs">
-                  API docs
-                </a>
-                <a className="tittleunder" href="/docs#webhooks">
-                  Webhooks
-                </a>
-                <a className="tittleunder" href="/docs#invoices">
-                  Invoices
-                </a>
-              </div>
-              <div className="footerPiece">
-                <h1 className="titlefoot">Account</h1>
-                <a className="tittleunder" href="/login">
-                  Log in
-                </a>
-                <a className="tittleunder" href="/signup">
-                  Create account
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div className="completeBottom">
-            <p>© 2026 Mintage</p>
-            <p>
-              Network fees vary between network and are never collected by
-              Mintage
-            </p>
-          </div>
-        </div>
+        <Footer></Footer>
       </div>
     </>
   );

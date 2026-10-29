@@ -1,5 +1,6 @@
-import { LogoImg } from "../../components/Logo";
 import { CoinLogo } from "../../components/CoinLogos";
+import { Header } from "../../components/Header";
+import { Footer } from "../../components/Footer";
 import "./Docs.css";
 
 const BASE_URL = "https://api.mintage.cc";
@@ -256,18 +257,7 @@ function Docs() {
   return (
     <>
       <div className="pageWrap">
-        <div className="topBarWrap">
-          <div className="topBarBetween">
-            <LogoImg />
-            <a className="docsStyle" href="/docs">
-              Docs
-            </a>
-          </div>
-          <div className="topBarBetween">
-            <button className="docsStyle">Log In</button>
-            <button className="createAccountButton">Create Account</button>
-          </div>
-        </div>
+        <Header></Header>
         <div className="mainContent">
           <div className="docsLeftSide">
             <h1 className="mainbubble">API Reference</h1>
@@ -294,17 +284,18 @@ function Docs() {
               <ol>
                 <li>
                   Your backend server calls <code>POST /gen_invoice</code> with
-                  your API key, the amount you want to charge in USD, any data you want
-                  to receive in the response, and what coin.
+                  your API key, the amount you want to charge in USD, any data
+                  you want to receive in the response, and what coin.
                 </li>
                 <li>
-                  Mintage will send a response consisting of: the deposit address
-                  for the user to send the crypto to, the exact amount in that
-                  coin they need to send, and a prebuilt checkout page link.
+                  Mintage will send a response consisting of: the deposit
+                  address for the user to send the crypto to, the exact amount
+                  in that coin they need to send, and a prebuilt checkout page
+                  link.
                 </li>
                 <li>
-                  Once the customer pays the set amount, Mintage will wait
-                  until the transaction receives a safe amount of confirmations
+                  Once the customer pays the set amount, Mintage will wait until
+                  the transaction receives a safe amount of confirmations
                   (varies between coins) and then it will send a webhook post to
                   your webhook and send the funds to your wallet.
                 </li>
@@ -424,6 +415,7 @@ function Docs() {
             </section>
           </div>
         </div>
+        <Footer></Footer>
       </div>
     </>
   );

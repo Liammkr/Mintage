@@ -1,0 +1,70 @@
+.signupPageFull {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.signupCard {
+  border: 2px solid rgb(229, 231, 236);
+  border-radius: 5px;
+  padding: 20px;
+  width: 350px;
+}
+.createAccText {
+  font-size: 15px;
+  margin: 10px;
+  width: 90%;
+  height: 40px;
+  border: 2px solid rgb(105, 92, 187);
+  border-radius: 5px;
+  background-color: rgb(129, 112, 240);
+  transition: background-color 0.3s ease;
+  color: white;
+  cursor: pointer;
+}
+.createAccText:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.createAccText:hover {
+  background-color: rgb(105, 92, 187);
+}
+.bottomSignin {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 12px;
+  align-items: center;
+  gap: 2px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+.asignin {
+  color: rgb(129, 112, 240);
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 0px;
+}
+.legal {
+  font-size: 8px;
+  margin-bottom: 0px;
+}
+.legaltext {
+  text-decoration: none;
+  color: rgb(129, 112, 240);
+}
+.cardwrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+}
+.completeWrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 85%;
+  padding-left: 7.5%;
+  padding-right: 7.5%;
+}

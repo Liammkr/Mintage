@@ -6,4 +6,5 @@ body {
     -apple-system,
     "Segoe UI",
     sans-serif;
+  overflow-x: hidden;
 }
