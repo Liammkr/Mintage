@@ -29,14 +29,17 @@ function Signup() {
         throw new Error(data?.error || `Request failed (${res.status})`);
       }
 
-      console.log("Created:", data);
+      toast.success("Account Created");
+      localStorage.setItem("user_id", data.user_id);
+      localStorage.setItem("api_key", data.api_key);
+      document.getElementById("one")?.style.setProperty("display", "none");
+      document.getElementById("two")?.style.setProperty("display", "block");
     } catch (err) {
       toast.error("Error occured while creating account");
     } finally {
       setLoading(false);
       setToken(null);
       turnstileRef.current?.reset();
-      toast.success("Account Creates Successfully");
     }
   };
 
@@ -47,12 +50,13 @@ function Signup() {
         <div className="signupPageFull">
           <BackArrow />
           <div className="cardwrapper">
-            <div className="signupCard">
+            <div className="signupCard" id="one">
               <LogoImg />
               <Turnstile
                 ref={turnstileRef}
                 style={{ marginTop: "10px" }}
                 siteKey="0x4AAAAAAFrYlvo1H-n30tio"
+                //siteKey="1x00000000000000000000AA"
                 onSuccess={(t) => setToken(t)}
                 onExpire={() => setToken(null)}
                 onError={() => setToken(null)}
@@ -81,6 +85,73 @@ function Signup() {
                   Sign In
                 </a>
               </div>
+            </div>
+          </div>
+
+          <div className="cardwrapper" id="two" style={{ display: "none" }}>
+            <div className="signupCard">
+              <LogoImg />
+              <div className="inputwrap">
+                <p className="acctnumtext">Account Number</p>
+                <p
+                  inputMode="numeric"
+                  className="inputtext"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    textAlign: "center",
+                    justifyContent: "center",
+                    marginTop: "0px",
+                    cursor: "pointer",
+                    marginBottom: "6px",
+                  }}
+                  onClick={async (e) => {
+                    try {
+                      await navigator.clipboard.writeText(
+                        e.currentTarget.textContent ?? "",
+                      );
+                      toast.success("Copied!");
+                    } catch {
+                      toast.error("Couldn't copy");
+                    }
+                  }}
+                >
+                  {localStorage.getItem("user_id")}
+                </p>
+              </div>
+              <p
+                style={{
+                  marginTop: "0px",
+                  fontSize: "15px",
+                  fontWeight: "600",
+                }}
+              >
+                Make sure to save your account number. There is no way to
+                recover it.
+              </p>
+              <button
+                className="createAccText"
+                onClick={() => (window.location.href = "/dashboard")}
+              >
+                <p className="textinsidedash">
+                  Continue To Dashboard{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style={{ marginLeft: "2px" }}
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </p>
+              </button>
             </div>
           </div>
         </div>

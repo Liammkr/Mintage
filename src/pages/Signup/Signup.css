@@ -21,6 +21,14 @@
   color: white;
   cursor: pointer;
 }
+.textinsidedash {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0px;
+}
+
 .createAccText:disabled {
   opacity: 0.5;
   cursor: not-allowed;
@@ -67,4 +75,13 @@
   width: 85%;
   padding-left: 7.5%;
   padding-right: 7.5%;
+}
+.acctnumber {
+  border: 2px solid rgb(129, 112, 240);
+  height: 30px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
