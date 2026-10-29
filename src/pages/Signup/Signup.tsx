@@ -51,7 +51,7 @@ function Signup() {
               <Turnstile
                 ref={turnstileRef}
                 style={{ marginTop: "10px" }}
-                siteKey="1x00000000000000000000AA"
+                siteKey="0x4AAAAAAFrYlvo1H-n30tio"
                 onSuccess={(t) => setToken(t)}
                 onExpire={() => setToken(null)}
                 onError={() => setToken(null)}
