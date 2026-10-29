@@ -33,7 +33,7 @@ function Signup() {
       localStorage.setItem("user_id", data.user_id);
       localStorage.setItem("api_key", data.api_key);
       document.getElementById("one")?.style.setProperty("display", "none");
-      document.getElementById("two")?.style.setProperty("display", "block");
+      document.getElementById("two")?.style.setProperty("display", "flex");
     } catch (err) {
       toast.error("Error occured while creating account");
     } finally {
@@ -105,18 +105,16 @@ function Signup() {
                     cursor: "pointer",
                     marginBottom: "6px",
                   }}
-                  onClick={async (e) => {
-                    try {
-                      await navigator.clipboard.writeText(
-                        e.currentTarget.textContent ?? "",
-                      );
-                      toast.success("Copied!");
-                    } catch {
-                      toast.error("Couldn't copy");
-                    }
-                  }}
+                  onClick={() =>
+                    navigator.clipboard.writeText(
+                      localStorage.getItem("user_id") ?? "",
+                    )
+                  }
                 >
-                  {localStorage.getItem("user_id")}
+                  {(localStorage.getItem("user_id") ?? "").replace(
+                    /(\d{5})(?=\d)/g,
+                    "$1 ",
+                  )}
                 </p>
               </div>
               <p
