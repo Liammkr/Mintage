@@ -36,6 +36,7 @@ function Signup() {
       setLoading(false);
       setToken(null);
       turnstileRef.current?.reset();
+      toast.success("Account Creates Successfully");
     }
   };
 
