@@ -20,7 +20,7 @@ function Signup() {
       const res = await fetch("https://api.mintage.cc/create_user", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ turnstileToken: token }),
+        body: JSON.stringify({ turnstile_token: token }),
       });
 
       const data = await res.json().catch(() => null);
