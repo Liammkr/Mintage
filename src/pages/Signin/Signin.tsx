@@ -3,14 +3,20 @@ import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 import { Footer } from "../../components/Footer";
 import { BackArrow } from "../../components/BackArrow";
 import { useState, useRef } from "react";
-import { Toaster, toast } from "sonner";
+import { toast } from "sonner";
 import { useNavigate } from "react-router-dom";
+import { useLayoutEffect } from "react";
+
 import "./Signin.css";
 function Signin() {
+  useLayoutEffect(() => {
+    if (localStorage.getItem("user_id") != "") {
+      navigate("/dashboard", { replace: true });
+    }
+  }, []);
   document.title = "Mintage | Sign In";
 
   const navigate = useNavigate();
-
   const [token, setToken] = useState<string | null>(null);
   const [accountNumber, setAccountNumber] = useState("");
   const [loading, setLoading] = useState(false);
@@ -54,7 +60,6 @@ function Signin() {
 
   return (
     <>
-      <Toaster position="top-right" theme="light" richColors closeButton />
       <div className="completeWrap no-scroll-page">
         <div className="signupPageFull">
           <BackArrow />

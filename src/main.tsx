@@ -8,10 +8,11 @@ import Signup from "./pages/Signup/Signup.tsx";
 import Signin from "./pages/Signin/Signin.tsx";
 import Fourofour from "./pages/404/404.tsx";
 import Dashboard from "./pages/Dashboard/Dashboard.tsx";
-
+import { Toaster } from "sonner";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
+      <Toaster position="top-right" theme="light" richColors closeButton />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/docs" element={<Docs />} />

@@ -11,17 +11,28 @@ export function Header() {
           Docs
         </a>
       </div>
-      <div className="topBarBetween">
-        <button className="docsStyle" onClick={() => navigate("/signin")}>
-          Log In
-        </button>
-        <button
-          className="createAccountButton"
-          onClick={() => navigate("/signup")}
-        >
-          Create Account
-        </button>
-      </div>
+      {localStorage.getItem("user_id") != "" ? (
+        <div className="topBarBetween">
+          <button
+            className="createAccountButton"
+            onClick={() => navigate("/dashboard")}
+          >
+            Dashboard
+          </button>
+        </div>
+      ) : (
+        <div className="topBarBetween">
+          <button className="docsStyle" onClick={() => navigate("/signin")}>
+            Log In
+          </button>
+          <button
+            className="createAccountButton"
+            onClick={() => navigate("/signup")}
+          >
+            Create Account
+          </button>
+        </div>
+      )}
     </div>
   );
 }

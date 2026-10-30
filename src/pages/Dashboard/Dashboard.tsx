@@ -8,8 +8,17 @@ import {
   LuLogOut,
 } from "react-icons/lu";
 import "./Dashboard.css";
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
 
 function Dashboard() {
+  const navigate = useNavigate();
+  function logoutofacc() {
+    localStorage.setItem("user_id", "");
+    toast.success("Logged Out");
+    navigate("/");
+  }
+  document.title = "Mintage | Dashboard";
   return (
     <div className="fulldashboard no-scroll-page no-margin-page">
       <div className="leftsidebardashboard">
@@ -34,7 +43,10 @@ function Dashboard() {
         <div className="bottomacctnumb">
           <p className="acctnumbersideshown">
             ••••• ••••• ••••• ••••• 92834{" "}
-            <LuLogOut className="logoutbuttononside"></LuLogOut>
+            <LuLogOut
+              className="logoutbuttononside"
+              onClick={() => logoutofacc()}
+            ></LuLogOut>
           </p>
         </div>
       </div>
