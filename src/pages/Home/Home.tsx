@@ -95,7 +95,10 @@ function Home() {
                   <path d="m12 5 7 7-7 7"></path>
                 </svg>
               </button>
-              <a className="docsButtonSectionOne" href="/docs">
+              <a
+                className="docsButtonSectionOne"
+                onClick={() => navigate("/docs")}
+              >
                 Developer docs
               </a>
             </div>

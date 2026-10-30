@@ -4,10 +4,12 @@ import { Footer } from "../../components/Footer";
 import { BackArrow } from "../../components/BackArrow";
 import { useRef, useState } from "react";
 import { Toaster, toast } from "sonner";
+import { useNavigate } from "react-router-dom";
 
 import "./Signup.css";
 
 function Signup() {
+  const navigate = useNavigate();
   const [token, setToken] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const turnstileRef = useRef<TurnstileInstance>(null);
@@ -70,18 +72,18 @@ function Signup() {
               </button>
               <p className="legal">
                 By clicking Create Account, you agree to our{" "}
-                <a href="/terms" className="legaltext">
+                <a onClick={() => navigate("/terms")} className="legaltext">
                   Terms of Service
                 </a>{" "}
                 and{" "}
-                <a href="/privacy" className="legaltext">
+                <a onClick={() => navigate("/policy")} className="legaltext">
                   Privacy Policy
                 </a>
                 .
               </p>
               <div className="bottomSignin">
                 <p>Already have an account?</p>
-                <a className="asignin" href="/signin">
+                <a className="asignin" onClick={() => navigate("/signin")}>
                   Sign In
                 </a>
               </div>
@@ -134,7 +136,7 @@ function Signup() {
               </p>
               <button
                 className="createAccText"
-                onClick={() => (window.location.href = "/dashboard")}
+                onClick={() => navigate("/dashboard")}
               >
                 <p className="textinsidedash">
                   Continue To Dashboard{" "}

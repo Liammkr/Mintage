@@ -8,7 +8,7 @@ export function Header() {
     <div className="topBarWrap">
       <div className="topBarBetween">
         <LogoImg />
-        <a className="docsStyle" href="/docs">
+        <a className="docsStyle" onClick={() => navigate("/docs")}>
           Docs
         </a>
       </div>

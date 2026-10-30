@@ -2,8 +2,10 @@ import { CoinLogo } from "../../components/CoinLogos";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import "./Docs.css";
+import { useNavigate } from "react-router-dom";
 
 const BASE_URL = "https://api.mintage.cc";
+const navigate = useNavigate();
 
 const genInvoiceRequest = String.raw`{
   "api_key": "mk_9c1e…",
@@ -261,16 +263,25 @@ function Docs() {
         <div className="mainContent">
           <div className="docsLeftSide">
             <h1 className="mainbubble">API Reference</h1>
-            <a className="bubbleside" href="/docs#overview">
+            <a
+              className="bubbleside"
+              onClick={() => navigate("/docs#overview")}
+            >
               Overview
             </a>
-            <a className="bubbleside" href="/docs#invoices">
+            <a
+              className="bubbleside"
+              onClick={() => navigate("/docs#invoices")}
+            >
               Creating Invoices
             </a>
-            <a className="bubbleside" href="/docs#coins">
+            <a className="bubbleside" onClick={() => navigate("/docs#coins")}>
               Supported Coins
             </a>
-            <a className="bubbleside" href="/docs#webhooks">
+            <a
+              className="bubbleside"
+              onClick={() => navigate("/docs#webhooks")}
+            >
               Webhooks
             </a>
           </div>

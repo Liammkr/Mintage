@@ -4,10 +4,12 @@ import { Footer } from "../../components/Footer";
 import { BackArrow } from "../../components/BackArrow";
 import { useState, useRef } from "react";
 import { Toaster, toast } from "sonner";
-
+import { useNavigate } from "react-router-dom";
 import "./Signin.css";
 
 function Signin() {
+  const navigate = useNavigate();
+
   const [token, setToken] = useState<string | null>(null);
   const [accountNumber, setAccountNumber] = useState("");
   const [loading, setLoading] = useState(false);
@@ -39,6 +41,7 @@ function Signin() {
       localStorage.setItem("user_id", data.user_id);
       localStorage.setItem("api_key", data.api_key);
       toast.success("Signed in");
+      navigate("/dashboard");
     } catch (err) {
       toast.error("Invalid account number");
     } finally {
@@ -98,7 +101,7 @@ function Signin() {
 
               <div className="bottomSignin">
                 <p>Dont have an account?</p>
-                <a className="asignin" href="/signup">
+                <a className="asignin" onClick={() => navigate("/signup")}>
                   Create account
                 </a>
               </div>
