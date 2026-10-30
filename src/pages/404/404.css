@@ -1,0 +1,40 @@
+.fullfourofourpage {
+  width: 85%;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.bigefourofour {
+  font-size: 50px;
+  font-weight: 800;
+  color: rgb(129, 112, 240);
+  margin-bottom: 0px;
+}
+.spanpagenotfound {
+  margin-top: 0px;
+}
+.returnhomebutton {
+  width: 300px;
+  height: 30px;
+  background-color: rgb(129, 112, 240);
+  color: white;
+  border: 1px solid rgb(71, 62, 128);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.returnhomebutton:hover {
+  background-color: rgb(71, 62, 128);
+}
+.mainfourofourbox {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
