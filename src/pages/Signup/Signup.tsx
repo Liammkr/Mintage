@@ -129,6 +129,7 @@ function Signup() {
                   marginTop: "0px",
                   fontSize: "15px",
                   fontWeight: "600",
+                  color: "#b91c1c",
                 }}
               >
                 Make sure to save your account number. There is no way to
