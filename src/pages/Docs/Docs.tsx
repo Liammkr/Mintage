@@ -254,6 +254,8 @@ function Endpoint({ method, path }: { method: string; path: string }) {
 }
 
 function Docs() {
+  document.title = "Mintage | API Docs";
+
   return (
     <>
       <div className="pageWrap">

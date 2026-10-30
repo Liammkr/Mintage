@@ -7,6 +7,7 @@ import "./HomeMobile.css";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
+  document.title = "Mintage | Crypto payments with 0% fees";
   const navigate = useNavigate();
   const payments = [
     {

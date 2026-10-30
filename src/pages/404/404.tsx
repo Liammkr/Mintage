@@ -3,6 +3,8 @@ import { Footer } from "../../components/Footer";
 import "./404.css";
 import { useNavigate } from "react-router-dom";
 function Fourofour() {
+  document.title = "Mintage | 404 Page Not Found";
+
   const navigate = useNavigate();
   return (
     <div className="fullfourofourpage">

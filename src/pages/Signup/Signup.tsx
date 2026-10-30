@@ -9,6 +9,8 @@ import { useNavigate } from "react-router-dom";
 import "./Signup.css";
 
 function Signup() {
+  document.title = "Mintage | Sign Up";
+
   const navigate = useNavigate();
   const [token, setToken] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);

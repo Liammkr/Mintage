@@ -6,8 +6,9 @@ import { useState, useRef } from "react";
 import { Toaster, toast } from "sonner";
 import { useNavigate } from "react-router-dom";
 import "./Signin.css";
-
 function Signin() {
+  document.title = "Mintage | Sign In";
+
   const navigate = useNavigate();
 
   const [token, setToken] = useState<string | null>(null);
