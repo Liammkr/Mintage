@@ -7,7 +7,7 @@ function Fourofour() {
 
   const navigate = useNavigate();
   return (
-    <div className="fullfourofourpage">
+    <div className="fullfourofourpage no-scroll-page">
       <Header></Header>
 
       <div className="mainfourofourbox">

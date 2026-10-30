@@ -8,3 +8,11 @@ body {
     sans-serif;
   overflow-x: hidden;
 }
+html:has(.no-scroll-page),
+body:has(.no-scroll-page) {
+  overflow-y: hidden;
+}
+html:has(.no-margin-page),
+body:has(.no-margin-page) {
+  margin: 0px;
+}

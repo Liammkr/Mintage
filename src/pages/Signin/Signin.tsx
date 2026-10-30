@@ -55,7 +55,7 @@ function Signin() {
   return (
     <>
       <Toaster position="top-right" theme="light" richColors closeButton />
-      <div className="completeWrap">
+      <div className="completeWrap no-scroll-page">
         <div className="signupPageFull">
           <BackArrow />
           <div className="cardwrapper">
