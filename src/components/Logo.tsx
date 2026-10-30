@@ -1,14 +1,12 @@
-import { useNavigate } from "react-router-dom";
 import "./Logo.css";
-const navigate = useNavigate();
 export function LogoImg({ size = 30 }: { size?: number }) {
   return (
-    <a onClick={() => navigate("/")}>
+    <a href="/">
       <svg
         width={size}
         height={size}
         viewBox="0 0 100 100"
-        onClick={() => navigate("/signin")}
+        href="/"
         style={{ cursor: "pointer" }}
       >
         <image href="/mintage_black.png" width={"100%"} height={"100%"} />
