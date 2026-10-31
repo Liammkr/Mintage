@@ -15,8 +15,14 @@ import { toast } from "sonner";
 
 export default function DashboardLeft() {
   const navigate = useNavigate();
+  if (
+    localStorage.getItem("user_id") == "" ||
+    localStorage.getItem("user_id") == null
+  ) {
+    window.location.href = "/signin";
+  }
   function logoutofacc() {
-    localStorage.setItem("user_id", "");
+    localStorage.clear();
     toast.success("Logged Out");
     navigate("/");
   }

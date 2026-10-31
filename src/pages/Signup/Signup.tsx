@@ -10,8 +10,11 @@ import "./Signup.css";
 
 function Signup() {
   useLayoutEffect(() => {
-    if (localStorage.getItem("user_id") != "") {
-      navigate("/dashboard", { replace: true });
+    if (
+      localStorage.getItem("user_id") != "" &&
+      localStorage.getItem("user_id") != null
+    ) {
+      window.location.href = "/dashboard";
     }
   }, []);
   document.title = "Mintage | Sign Up";
