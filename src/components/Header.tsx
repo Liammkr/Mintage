@@ -11,7 +11,8 @@ export function Header() {
           Docs
         </a>
       </div>
-      {localStorage.getItem("user_id") != "" ? (
+      {localStorage.getItem("user_id") != "" &&
+      localStorage.getItem("user_id") != null ? (
         <div className="topBarBetween">
           <button
             className="createAccountButton"
