@@ -7,7 +7,7 @@ import Docs from "./pages/Docs/Docs.tsx";
 import Signup from "./pages/Signup/Signup.tsx";
 import Signin from "./pages/Signin/Signin.tsx";
 import Fourofour from "./pages/404/404.tsx";
-import Overview from "./pages/Dashboard/Overview/Overview.tsx";
+import Transactions from "./pages/Dashboard/Transactions/Transactions.tsx";
 
 import { Toaster } from "sonner";
 createRoot(document.getElementById("root")!).render(
@@ -19,7 +19,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/docs" element={<Docs />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
-        <Route path="/dashboard/overview" element={<Overview />} />
+        <Route path="/dashboard/transactions" element={<Transactions />} />
         <Route path="*" element={<Fourofour />} />
       </Routes>
     </BrowserRouter>

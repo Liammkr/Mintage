@@ -27,12 +27,15 @@
 .status.confirmed {
   background: rgb(230, 246, 239);
   color: #15803d;
+  border-color: #15803d;
 }
 .status.confirming {
   background: #eeeefe;
   color: #4338ca;
+  border-color: #4338ca;
 }
 .status.expired {
   background: #feeeee;
   color: #b91c1c;
+  border-color: #b91c1c;
 }
