@@ -39,3 +39,14 @@
   color: #b91c1c;
   border-color: #b91c1c;
 }
+
+.status.pending {
+  background: rgb(246, 247, 249);
+  color: #454d5e;
+  border-color: #454d5e;
+}
+.status.underpaid {
+  background: #fff7e8;
+  color: #b45309;
+  border-color: #b45309;
+}

@@ -5,43 +5,56 @@ import "./Transactions.css";
 import { FiPlus } from "react-icons/fi";
 import { CoinLogo } from "../../../components/CoinLogos";
 import { StatusComplete } from "../../../components/Status";
-import { MdContentCopy, MdOpenInNew, MdClose } from "react-icons/md";
-import { useEffect } from "react";
+import {
+  MdContentCopy,
+  MdOpenInNew,
+  MdClose,
+  MdCheck,
+  MdRefresh,
+} from "react-icons/md";
+import { useEffect, useState } from "react";
+
+type Transaction = {
+  transaction_id: string;
+  coin: string;
+  amount_usd: string;
+  confirmations?: number;
+  confirmations_needed: number;
+  created: number;
+  status: string;
+  withdraw_txid?: string;
+};
+
+const usd = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+});
+
+function formatDate(seconds: number) {
+  return new Date(seconds * 1000).toLocaleString("en-US", {
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+  });
+}
+
+const skeletonWidths = [
+  "85%",
+  "65%",
+  "55%",
+  "50%",
+  "36px",
+  "26px",
+  "80%",
+  "18px",
+];
 function Transactions() {
-  const payments = [
-    {
-      description: "37fc27341355b06c619395f7",
-      coin: "BTC",
-      amount: "$199.99",
-      status: "Confirmed",
-    },
-    {
-      description: "37fc27341355b06c619395f7",
-      coin: "ETH",
-      amount: "$19.99",
-      status: "Confirming",
-    },
-    {
-      description: "37fc27341355b06c619395f7",
-      coin: "LTC",
-      amount: "$1,199.00",
-      status: "Confirmed",
-    },
-    {
-      description: "37fc27341355b06c619395f7",
-      coin: "DOGE",
-      amount: "$49.00",
-      status: "Expired",
-    },
-    {
-      description: "37fc27341355b06c619395f7",
-      coin: "POL",
-      amount: "$523.00",
-      status: "Confirmed",
-    },
-  ];
-  //const navigate = useNavigate();
-  document.title = "Mintage | Dashboard Overview";
+  const [transactions, setTransactions] = useState<Transaction[]>([]);
+  const [loadState, setLoadState] = useState<"loading" | "done" | "failed">(
+    "loading",
+  );
+
   const checktransactions = async () => {
     try {
       const res = await fetch("https://api.mintage.cc/transactions", {
@@ -58,9 +71,10 @@ function Transactions() {
         throw new Error(data?.error || `Request failed (${res.status})`);
       }
 
-      toast.success("Transactions Loaded");
-      console.log(data);
+      setTransactions(data.transactions);
+      setLoadState("done");
     } catch (err) {
+      setLoadState("failed");
       toast.error("Error Loading Transactions");
     }
   };
@@ -79,35 +93,76 @@ function Transactions() {
               and see their status.
             </p>
           </div>
-          <button className="createinvbutton">
-            <FiPlus size={20}></FiPlus>New Payment
-          </button>
+          <div className="righthandbuttonsontransactions">
+            <button className="refrecttransbutton">
+              <MdRefresh
+                size={20}
+                onClick={() => checktransactions()}
+              ></MdRefresh>
+            </button>
+            <button className="createinvbutton">
+              <FiPlus size={20}></FiPlus>New Payment
+            </button>
+          </div>
         </div>
         <div className="maintransactionchart">
           <div className="tableKeyList324">
             <span>Invoice #</span>
             <span>Created</span>
             <span>Coin</span>
-            <span>Ammount</span>
+            <span>Amount</span>
             <span>Confirmations</span>
             <span>Withdrawn</span>
             <span>Status</span>
           </div>
-          {payments.map((p) => (
-            <div className="table324">
+
+          {loadState === "loading" &&
+            Array.from({ length: 8 }, (_, row) => (
+              <div className="table324" key={row}>
+                {skeletonWidths.map((width, cell) => (
+                  <span
+                    className="skeleton"
+                    style={{ width }}
+                    key={cell}
+                  ></span>
+                ))}
+              </div>
+            ))}
+
+          {loadState === "failed" && (
+            <p className="tableMessage">
+              Could not load transactions. Try again later.
+            </p>
+          )}
+
+          {loadState === "done" && transactions.length === 0 && (
+            <p className="tableMessage">No transactions yet.</p>
+          )}
+
+          {transactions.map((t) => (
+            <div className="table324" key={t.transaction_id}>
               <span className="transactionidintable">
-                {p.description}{" "}
+                {t.transaction_id}{" "}
                 <MdContentCopy className="copytextbutton"></MdContentCopy>
               </span>
-              <span>Oct 30, 11:30 PM</span>
+              <span>{formatDate(t.created)}</span>
               <span className="coinColumn324">
-                <CoinLogo coin={p.coin} size={20} />
-                {p.coin}
+                <CoinLogo coin={t.coin} size={20} />
+                {t.coin}
               </span>
-              <span>{p.amount}</span>
-              <span className="confirmationstableentry">0/32</span>
-              <MdClose className="withdrwantstatus notwithdrawn"></MdClose>
-              <StatusComplete status={p.status} />
+              <span>{usd.format(Number(t.amount_usd))}</span>
+              <span className="confirmationstableentry">
+                {Math.min(t.confirmations ?? 0, t.confirmations_needed)}/
+                {t.confirmations_needed}
+              </span>
+              {t.withdraw_txid ? (
+                <MdCheck className="withdrwantstatus withdrawn"></MdCheck>
+              ) : (
+                <MdClose className="withdrwantstatus notwithdrawn"></MdClose>
+              )}
+              <StatusComplete
+                status={t.status.charAt(0).toUpperCase() + t.status.slice(1)}
+              />
               <MdOpenInNew className="openinnewwindow" size={18}></MdOpenInNew>
             </div>
           ))}

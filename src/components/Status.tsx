@@ -1,10 +1,12 @@
-import { Check, X, Loader2 } from "lucide-react";
+import { Check, X, Loader2, Clock, TriangleAlert } from "lucide-react";
 import "./Status.css";
 function StatusIcon({ status }: { status: string }) {
   const s = status.toLowerCase();
   if (s === "confirming") return <Loader2 className="statusIcon spin" />;
   if (s === "confirmed") return <Check className="statusIcon" />;
   if (s === "expired") return <X className="statusIcon" />;
+  if (s === "pending") return <Clock className="statusIcon" />;
+  if (s === "underpaid") return <TriangleAlert className="statusIcon" />;
   return null;
 }
 export function StatusComplete({ status }: { status: string }) {
