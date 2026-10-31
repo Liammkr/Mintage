@@ -9,10 +9,7 @@
   flex-direction: column;
   box-sizing: border-box;
   padding-bottom: 15px;
-}
-.fulldashboard {
-  margin: 0px;
-  padding: 0px;
+  flex-shrink: 0;
 }
 .sidebartexts {
   font-size: 16px;
@@ -49,14 +46,13 @@
   margin-top: 3px;
 }
 .logoutbuttononside {
-  transition: transform 0.3s ease;
+  transition: transform 1s ease;
   transition: background-color 0.3s ease;
   cursor: pointer;
   padding: 5px;
   border-radius: 5px;
 }
 .logoutbuttononside:hover {
-  transform: scale(1.2);
   background-color: rgb(229, 231, 236);
 }
 .bottomacctnumb {

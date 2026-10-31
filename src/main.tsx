@@ -7,7 +7,8 @@ import Docs from "./pages/Docs/Docs.tsx";
 import Signup from "./pages/Signup/Signup.tsx";
 import Signin from "./pages/Signin/Signin.tsx";
 import Fourofour from "./pages/404/404.tsx";
-import Dashboard from "./pages/Dashboard/Dashboard.tsx";
+import Overview from "./pages/Dashboard/Overview/Overview.tsx";
+
 import { Toaster } from "sonner";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -18,7 +19,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/docs" element={<Docs />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard/overview" element={<Overview />} />
         <Route path="*" element={<Fourofour />} />
       </Routes>
     </BrowserRouter>
