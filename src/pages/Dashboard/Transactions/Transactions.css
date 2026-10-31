@@ -53,8 +53,11 @@
   flex: 1;
   min-height: 0;
   overflow-y: auto;
+  scrollbar-width: none;
 }
-
+.maintransactionchart::-webkit-scrollbar {
+  display: none;
+}
 .tableKeyList324 {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr 0.5fr 0.5fr 0.5fr 0.4fr 1fr 0.1fr;
