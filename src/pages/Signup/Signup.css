@@ -85,3 +85,16 @@
   justify-content: center;
   text-align: center;
 }
+
+.inputtextsignup {
+  border: 2px solid rgb(129, 112, 240);
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 50px;
+  text-align: center;
+  font-size: 23px;
+  font-family:
+    "Geist Mono Variable", ui-monospace, SFMono-Regular, Menlo, Consolas,
+    monospace;
+}

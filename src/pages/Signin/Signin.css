@@ -75,7 +75,10 @@
   box-sizing: border-box;
   height: 50px;
   text-align: center;
-  font-size: 25px;
+  font-size: 23px;
+  font-family:
+    "Geist Mono Variable", ui-monospace, SFMono-Regular, Menlo, Consolas,
+    monospace;
 }
 .inputwrap {
   width: 350px;

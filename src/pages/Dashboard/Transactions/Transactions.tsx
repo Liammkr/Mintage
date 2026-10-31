@@ -2,7 +2,7 @@
 import { toast } from "sonner";
 import DashboardLeft from "../../../components/DashboardLeft";
 import "./Transactions.css";
-import { FiPlus } from "react-icons/fi";
+//import { FiPlus } from "react-icons/fi";
 import { CoinLogo } from "../../../components/CoinLogos";
 import { StatusComplete } from "../../../components/Status";
 import {
@@ -104,9 +104,6 @@ function Transactions() {
             >
               <MdRefresh size={20}></MdRefresh>
             </button>
-            <button className="createinvbutton">
-              <FiPlus size={20}></FiPlus>New Payment
-            </button>
           </div>
         </div>
         <div className="maintransactionchart">
@@ -154,7 +151,14 @@ function Transactions() {
                 <CoinLogo coin={t.coin} size={20} />
                 {t.coin}
               </span>
-              <span>{usd.format(Number(t.amount_usd))}</span>
+              <span
+                style={{
+                  fontFamily:
+                    "'Geist Mono Variable', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+                }}
+              >
+                {usd.format(Number(t.amount_usd))}
+              </span>
               <span className="confirmationstableentry">
                 {Math.min(t.confirmations ?? 0, t.confirmations_needed)}/
                 {t.confirmations_needed}

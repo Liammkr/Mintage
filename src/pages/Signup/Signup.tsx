@@ -96,14 +96,14 @@ function Signup() {
             </div>
           </div>
 
-          <div className="cardwrapper" id="two" style={{ display: "none" }}>
+          <div className="cardwrapper" id="two" style={{ display: "block" }}>
             <div className="signupCard">
               <LogoImg />
               <div className="inputwrap">
                 <p className="acctnumtext">Account Number</p>
                 <p
                   inputMode="numeric"
-                  className="inputtext"
+                  className="inputtextsignup"
                   style={{
                     display: "flex",
                     alignItems: "center",

@@ -42,8 +42,11 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 11px;
+  font-size: 9px;
   margin-top: 3px;
+  font-family:
+    "Geist Mono Variable", ui-monospace, SFMono-Regular, Menlo, Consolas,
+    monospace;
 }
 .logoutbuttononside {
   transition: transform 1s ease;
