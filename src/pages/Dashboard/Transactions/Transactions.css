@@ -82,6 +82,9 @@
   padding-left: 15px;
   padding-right: 15px;
   height: 50px;
+  font-family:
+    "Geist Mono Variable", ui-monospace, SFMono-Regular, Menlo, Consolas,
+    monospace;
 }
 .coinColumn324 {
   align-items: center;

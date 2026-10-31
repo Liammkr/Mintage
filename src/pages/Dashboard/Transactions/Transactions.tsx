@@ -151,14 +151,7 @@ function Transactions() {
                 <CoinLogo coin={t.coin} size={20} />
                 {t.coin}
               </span>
-              <span
-                style={{
-                  fontFamily:
-                    "'Geist Mono Variable', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
-                }}
-              >
-                {usd.format(Number(t.amount_usd))}
-              </span>
+              <span>{usd.format(Number(t.amount_usd))}</span>
               <span className="confirmationstableentry">
                 {Math.min(t.confirmations ?? 0, t.confirmations_needed)}/
                 {t.confirmations_needed}
