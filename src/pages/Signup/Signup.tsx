@@ -14,7 +14,7 @@ function Signup() {
       localStorage.getItem("user_id") != "" &&
       localStorage.getItem("user_id") != null
     ) {
-      window.location.href = "/dashboard";
+      window.location.href = "/dashboard/overview";
     }
   }, []);
   document.title = "Mintage | Sign Up";
@@ -146,7 +146,7 @@ function Signup() {
               </p>
               <button
                 className="createAccText"
-                onClick={() => navigate("/dashboard")}
+                onClick={() => navigate("/dashboard/overview")}
               >
                 <p className="textinsidedash">
                   Continue To Dashboard{" "}

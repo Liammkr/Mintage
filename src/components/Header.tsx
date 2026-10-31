@@ -16,7 +16,7 @@ export function Header() {
         <div className="topBarBetween">
           <button
             className="createAccountButton"
-            onClick={() => navigate("/dashboard")}
+            onClick={() => navigate("/dashboard/overview")}
           >
             Dashboard
           </button>

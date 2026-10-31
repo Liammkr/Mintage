@@ -22,6 +22,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/signin" element={<Signin />} />
         <Route path="/dashboard/transactions" element={<Transactions />} />
         <Route path="/dashboard/wallets" element={<Wallets />} />
+        <Route path="/dashboard/*" element={<Transactions />} />
         <Route path="*" element={<Fourofour />} />
       </Routes>
     </BrowserRouter>

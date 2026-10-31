@@ -14,7 +14,7 @@ function Signin() {
       localStorage.getItem("user_id") != "" &&
       localStorage.getItem("user_id") != null
     ) {
-      window.location.href = "/dashboard";
+      window.location.href = "/dashboard/overview";
     }
   }, []);
   document.title = "Mintage | Sign In";
@@ -51,7 +51,7 @@ function Signin() {
       localStorage.setItem("user_id", data.user_id);
       localStorage.setItem("api_key", data.api_key);
       toast.success("Signed in");
-      navigate("/dashboard");
+      navigate("/dashboard/overview");
     } catch (err) {
       toast.error("Invalid account number");
     } finally {
