@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import DashboardLeft from "../../../components/DashboardLeft";
 import "./Transactions.css";
@@ -40,7 +40,7 @@ function Transactions() {
       status: "Confirmed",
     },
   ];
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   document.title = "Mintage | Dashboard Overview";
   const checktransactions = async () => {
     try {
