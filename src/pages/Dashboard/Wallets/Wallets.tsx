@@ -1,6 +1,6 @@
 import { CoinLogo } from "../../../components/CoinLogos";
 import DashboardLeft from "../../../components/DashboardLeft";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import "./Wallets.css";
 function Wallets() {
@@ -58,6 +58,32 @@ function Wallets() {
   ];
   const [drafts, setDrafts] = useState<Record<string, string>>({});
   const [saved, setSaved] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState(true);
+
+  const loadWallets = async () => {
+    try {
+      const res = await fetch("https://api.mintage.cc/get_wallets", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          user_id: localStorage.getItem("user_id"),
+        }),
+      });
+
+      const data = await res.json().catch(() => null);
+
+      if (!res.ok) {
+        throw new Error(data?.error || `Request failed (${res.status})`);
+      }
+
+      setDrafts(data.wallets);
+      setSaved(data.wallets);
+    } catch {
+      toast.error("Error Loading Wallets");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const saveWallet = async (coin: string, address: string) => {
     try {
@@ -83,6 +109,9 @@ function Wallets() {
       toast.error(err instanceof Error ? err.message : "Could not save wallet");
     }
   };
+  useEffect(() => {
+    loadWallets();
+  }, []);
   return (
     <div className="fulldashboard no-scroll-page no-margin-page">
       <DashboardLeft></DashboardLeft>
@@ -109,17 +138,21 @@ function Wallets() {
                   <CoinLogo coin={c.id} size={24}></CoinLogo>
                   {c.network}
                 </div>
-                <input
-                  className="walletaddress"
-                  aria-label={`${c.network} withdraw address`}
-                  placeholder="Paste address"
-                  spellCheck={false}
-                  autoComplete="off"
-                  value={drafts[c.id] ?? ""}
-                  onChange={(e) =>
-                    setDrafts((prev) => ({ ...prev, [c.id]: e.target.value }))
-                  }
-                ></input>
+                {loading ? (
+                  <span className="skeleton"></span>
+                ) : (
+                  <input
+                    className="walletaddress"
+                    aria-label={`${c.network} withdraw address`}
+                    placeholder="Paste address"
+                    spellCheck={false}
+                    autoComplete="off"
+                    value={drafts[c.id] ?? ""}
+                    onChange={(e) =>
+                      setDrafts((prev) => ({ ...prev, [c.id]: e.target.value }))
+                    }
+                  ></input>
+                )}
                 {changed && (
                   <button
                     className="walletsave"
