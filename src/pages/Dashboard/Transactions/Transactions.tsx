@@ -5,8 +5,8 @@ import "./Transactions.css";
 import { FiPlus } from "react-icons/fi";
 import { CoinLogo } from "../../../components/CoinLogos";
 import { StatusComplete } from "../../../components/Status";
-import { MdContentCopy, MdOpenInNew, MdCheck, MdClose } from "react-icons/md";
-
+import { MdContentCopy, MdOpenInNew, MdClose } from "react-icons/md";
+import { useEffect } from "react";
 function Transactions() {
   const payments = [
     {
@@ -42,6 +42,31 @@ function Transactions() {
   ];
   const navigate = useNavigate();
   document.title = "Mintage | Dashboard Overview";
+  const checktransactions = async () => {
+    try {
+      const res = await fetch("https://api.mintage.cc/transactions", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          user_id: localStorage.getItem("user_id"),
+        }),
+      });
+
+      const data = await res.json().catch(() => null);
+
+      if (!res.ok) {
+        throw new Error(data?.error || `Request failed (${res.status})`);
+      }
+
+      toast.success("Transactions Loaded");
+      console.log(data);
+    } catch (err) {
+      toast.error("Error Loading Transactions");
+    }
+  };
+  useEffect(() => {
+    checktransactions();
+  }, []);
   return (
     <div className="fulldashboard no-scroll-page no-margin-page">
       <DashboardLeft></DashboardLeft>
