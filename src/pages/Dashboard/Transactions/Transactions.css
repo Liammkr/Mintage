@@ -183,3 +183,7 @@
   color: #454d5e;
   text-align: center;
 }
+.refrecttransbutton:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

@@ -54,6 +54,7 @@ function Transactions() {
   const [loadState, setLoadState] = useState<"loading" | "done" | "failed">(
     "loading",
   );
+  const [refreshDisabled, setRefreshDisabled] = useState(true);
 
   const checktransactions = async () => {
     try {
@@ -76,6 +77,8 @@ function Transactions() {
     } catch (err) {
       setLoadState("failed");
       toast.error("Error Loading Transactions");
+    } finally {
+      setTimeout(() => setRefreshDisabled(false), 5000);
     }
   };
   useEffect(() => {
@@ -94,11 +97,12 @@ function Transactions() {
             </p>
           </div>
           <div className="righthandbuttonsontransactions">
-            <button className="refrecttransbutton">
-              <MdRefresh
-                size={20}
-                onClick={() => checktransactions()}
-              ></MdRefresh>
+            <button
+              className="refrecttransbutton"
+              disabled={refreshDisabled}
+              onClick={() => checktransactions()}
+            >
+              <MdRefresh size={20}></MdRefresh>
             </button>
             <button className="createinvbutton">
               <FiPlus size={20}></FiPlus>New Payment
