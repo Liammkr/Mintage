@@ -1,6 +1,5 @@
 import { LogoImg } from "./Logo";
 import {
-  MdOutlineSpaceDashboard,
   MdOutlinePayments,
   MdOutlineAccountBalanceWallet,
   MdCode,
@@ -12,6 +11,13 @@ import { IoMdBook } from "react-icons/io";
 import "./DashboardLeft.css";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
+
+/*
+<p className="sidebartexts">
+        <MdOutlineSpaceDashboard></MdOutlineSpaceDashboard>Overview
+      </p>
+      
+      MdOutlineSpaceDashboard,*/
 
 export default function DashboardLeft() {
   const navigate = useNavigate();
@@ -30,9 +36,7 @@ export default function DashboardLeft() {
     <div className="leftsidebardashboard">
       <LogoImg></LogoImg>
       <p className="sidebardescriptions">General</p>
-      <p className="sidebartexts">
-        <MdOutlineSpaceDashboard></MdOutlineSpaceDashboard>Overview
-      </p>
+
       <p
         className="sidebartexts"
         onClick={() => navigate("/dashboard/transactions")}

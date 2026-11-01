@@ -35,6 +35,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/dashboard/wallets" element={<Wallets />} />
         <Route path="/dashboard/account" element={<Account />} />
         <Route path="/dashboard/api" element={<API />} />
+        <Route path="/dashboard/overview" element={<Transactions />} />
         <Route path="*" element={<Fourofour />} />
       </Routes>
     </BrowserRouter>
