@@ -194,7 +194,7 @@ function API() {
               <div className="apiconfirm">
                 <p>
                   Completing this action creates a new webhook secret and your
-                  old webhook secret will stop working imediatly.
+                  old webhook secret will stop working immediately.
                 </p>
                 <button
                   className="accountbutton accountbuttondanger"
@@ -224,7 +224,7 @@ function API() {
             <div>
               <p className="accountlabel">API key</p>
               <p className="accountdescription">
-                Use this API key to create invoices from you own backend.
+                Use this API key to create invoices from your own backend.
               </p>
             </div>
             {!confirmingKey && (
@@ -239,7 +239,7 @@ function API() {
               <div className="apiconfirm">
                 <p>
                   Completing this action creates a new API key and your old API
-                  key will stop working imediatly.
+                  key will stop working immediately.
                 </p>
                 <button
                   className="accountbutton accountbuttondanger"

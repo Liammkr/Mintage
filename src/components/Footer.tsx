@@ -60,7 +60,8 @@ export function Footer() {
       <div className="completeBottom">
         <p>© 2026 Mintage</p>
         <p>
-          Network fees vary between network and are never collected by Mintage
+          Network fees vary between networks and are never collected by
+          Mintage
         </p>
       </div>
     </div>

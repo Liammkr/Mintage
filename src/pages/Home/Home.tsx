@@ -65,13 +65,13 @@ function Home() {
         <div className="sectionOne" id="Payments">
           <div className="leftSide">
             <h1 className="titleText">
-              Crypto payents with{" "}
+              Crypto payments with{" "}
               <span style={{ color: "rgb(129, 112, 240)" }}>0%</span> fees.
             </h1>
             <p className="descriptionText">
-              Accept multiple different Crypto currencies like Bitcoin, Ethereum
+              Accept multiple different cryptocurrencies like Bitcoin, Ethereum
               and more. Implementation for your online stores or SaaS solutions
-              without any extra fees added besides the blockchains own fees.
+              without any extra fees added besides the blockchain's own fees.
               Sign up without any personal information.
             </p>
             <div className="sectionOneButtons">
@@ -120,7 +120,7 @@ function Home() {
               <div className="tableKeyList">
                 <span>Description</span>
                 <span>Coin</span>
-                <span>Ammount</span>
+                <span>Amount</span>
                 <span>Status</span>
               </div>
               {payments.map((p) => (
@@ -161,8 +161,8 @@ function Home() {
           <div className="descriptionWrapper">
             <p className="zeroLogDescription">
               Mintage never tracks any of your personal information. When
-              signing up, all you recieve is an account number. We will never
-              ask for any personal information such as your name, email adress,
+              signing up, all you receive is an account number. We will never
+              ask for any personal information such as your name, email address,
               or phone number.
             </p>
           </div>
@@ -172,7 +172,7 @@ function Home() {
             <div className="fourLeft">
               <h1 style={{ marginTop: "0px" }}>Prebuilt checkout page.</h1>
               <p style={{ paddingRight: "80px" }}>
-                Hosted by Mintage for easy setup. If you want to, directly
+                Hosted by Mintage for easy setup. If you want to directly
                 display the invoice in your code, there are infinite
                 possibilities for your own checkout pages.
               </p>
@@ -189,7 +189,7 @@ function Home() {
           </h1>
           <div className="descriptionWrapper">
             <p className="zeroLogDescription">
-              Mintage never collects any fees of any ammount. Blockchain fees
+              Mintage never collects any fees of any amount. Blockchain fees
               are unavoidable and can range from 0 to 30 cents. Mintage attempts
               to reduce blockchain transactions by withdrawing in batches.
             </p>

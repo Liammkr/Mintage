@@ -108,7 +108,7 @@ function Signin() {
               </button>
 
               <div className="bottomSignin">
-                <p>Dont have an account?</p>
+                <p>Don't have an account?</p>
                 <a className="asignin" onClick={() => navigate("/signup")}>
                   Create account
                 </a>

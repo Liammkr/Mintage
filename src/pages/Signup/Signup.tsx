@@ -46,7 +46,7 @@ function Signup() {
       document.getElementById("one")?.style.setProperty("display", "none");
       document.getElementById("two")?.style.setProperty("display", "flex");
     } catch (err) {
-      toast.error("Error occured while creating account");
+      toast.error("Error occurred while creating account");
     } finally {
       setLoading(false);
       setToken(null);
