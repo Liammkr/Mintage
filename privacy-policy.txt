@@ -1,0 +1,213 @@
+MINTAGE PRIVACY POLICY
+
+Effective date: October 31, 2026
+
+
+1. ABOUT THIS POLICY
+
+1.1 This Privacy Policy explains what information Mintage ("Mintage", "we", "us"), the operator of mintage.cc, collects, why we use it, who receives it, how long we keep it, and what choices you have.
+
+1.2 It applies to the Mintage website, dashboard, API, webhooks and payment processing (the "Service"). It forms part of our Terms of Service.
+
+1.3 "Merchant" means someone with a Mintage account. "Customer" means someone paying a merchant through Mintage.
+
+The short version
+
+- You can sign up without giving a name, email address or phone number.
+- We store what is needed to run your account and process payments, including invoice records and payout addresses.
+- We don't sell your information, show ads, or use analytics or advertising trackers.
+- We use outside providers for hosting, bot protection and blockchain data, and they receive some information.
+- Deleting your account removes your account data, but we keep our invoice records so that late payments can still be recovered.
+- Blockchain transactions are public and permanent. Nobody can delete them.
+
+
+2. INFORMATION WE COLLECT
+
+2.1 Account information
+
+- Your account number, which is the 20-digit number created when you sign up
+- Your API key
+- The date your account was created
+- Your webhook URL and webhook secret, if you set them
+- The payout address you save for each coin
+
+2.2 Invoice and payment information
+
+- Transaction ID, coin, status, and the times an invoice was created and expires
+- The USD price, the crypto amount requested and the amount received
+- The invoice's deposit address and that address's encrypted private key
+- The number of blockchain confirmations
+- The transaction ID of each payout, and any payout error
+- The API key used to create the invoice
+- Whatever the merchant puts in the invoice_data field
+
+2.3 Technical information
+
+- IP addresses and similar request details, which are used for rate limiting and security and may be recorded by our hosting and security providers
+- Operational logs and alerts, which can include invoice IDs, deposit addresses, payout addresses, transaction IDs and error messages. We don't deliberately include account numbers in them, although an unexpected error message could contain one
+
+2.4 Information stored in your browser
+
+- Your account number, so that you stay signed in
+- Your theme choice
+
+2.5 Messages you send us
+
+If you contact us, we receive whatever you choose to include in your message, along with any contact details you use to send it.
+
+2.6 What we don't ask for
+
+We don't ask for your name, email address, phone number, postal address, government ID or bank details to create an account. We also don't record which wallet a customer's payment was sent from as part of our invoice records, although that information is publicly visible on the blockchain.
+
+
+3. HOW WE USE INFORMATION
+
+We use information to:
+
+- create and run accounts, and sign you in;
+- create invoices, detect payments and send payouts;
+- send webhooks to the URL you choose;
+- show your transactions and settings in the dashboard;
+- apply rate limits, prevent abuse and protect the Service;
+- find and fix errors, and recover funds where we can;
+- answer messages you send us; and
+- meet legal duties, enforce our terms and respond to lawful requests.
+
+We don't use your information for advertising, and we don't make automated decisions about you that produce legal effects. An invoice's status is worked out automatically from blockchain data, as described in our Terms of Service.
+
+
+4. LEGAL BASES
+
+Where laws such as the GDPR or UK GDPR apply, we rely on these legal bases:
+
+- Contract: to provide the Service you signed up for, including invoices, payouts and webhooks.
+- Legitimate interests: to keep the Service secure, prevent abuse, fix problems, keep backups and recover funds, where those interests aren't overridden by your rights.
+- Legal obligation: to comply with the law and with valid legal requests.
+
+We don't rely on consent for the core Service. If we ever do, you can withdraw that consent at any time.
+
+
+5. MERCHANTS AND THEIR CUSTOMERS
+
+5.1 Merchants decide what they send us about their customers. For personal information a merchant places in invoice_data, the merchant is responsible for having a lawful basis and for telling their customers about it. We process it to provide the Service to that merchant.
+
+5.2 We ask merchants not to put personal or sensitive information in invoice_data. We recommend using a plain order number.
+
+5.3 If you are a customer, please contact the merchant you paid with any questions about your order or your information. Mintage generally can't tell who a customer is, and may not be able to find information about you. The merchant's own privacy policy covers how they use your information.
+
+
+6. WHO RECEIVES INFORMATION
+
+6.1 We don't sell personal information, and we don't share it for advertising. We share information only as described here.
+
+6.2 Service providers. These providers help us run Mintage, and we may change them over time:
+
+- Vercel: hosts the website and API, and processes requests and application logs.
+- Google Firebase: stores account and invoice records.
+- Cloudflare: provides the Turnstile check at sign-up and sign-in, and processes information from your browser and device to detect bots. Cloudflare's own privacy policy applies to this.
+- Blockchain data and network providers: these include Blockchair, BlockCypher, Haskoin, Mempool.space, Litecoinspace, DigiExplorer, PublicNode, BNB Chain, Solana, TronGrid and TON Center. They receive the deposit addresses we check and the transactions we send.
+- Alert and messaging tools: these may receive operational alerts, as described in section 2.3.
+
+6.3 Price providers. We get prices from Coinbase and CoinGecko. We request prices by coin and don't send them your account information.
+
+6.4 Merchants' systems. When an invoice is paid, we send its details, including invoice_data, to the webhook URL saved by the merchant. The merchant controls that system.
+
+6.5 Public blockchains. Payments and payouts are recorded on public blockchains, where anyone can see them.
+
+6.6 Legal requests and safety. We may share information if we reasonably believe the law or a valid legal process requires it, or if it is needed to protect people, the Service or our rights, or to investigate fraud or misuse. We may also use tools or services that screen for fraud and sanctions risks.
+
+6.7 Business transfers. If Mintage is involved in a merger, sale or reorganisation, information may be transferred as part of it. This policy, or a notice of any changes to it, will continue to apply.
+
+
+7. COOKIES AND BROWSER STORAGE
+
+7.1 Mintage doesn't use advertising cookies or analytics. We don't set our own tracking cookies.
+
+7.2 The site uses your browser's local storage for your account number and theme choice, because the site can't work as designed without them. Logging out removes your account number from that browser. Your theme choice stays until you clear your browser's data.
+
+7.3 Anyone with access to your browser may be able to read local storage, so log out on shared devices.
+
+7.4 Cloudflare's Turnstile check runs on the sign-up and sign-in pages and may use its own browser storage or similar technology to work. It can't be turned off on those pages, because it is how we keep bots out.
+
+7.5 We don't respond to Do Not Track signals, because we don't track you across other websites.
+
+
+8. HOW LONG WE KEEP INFORMATION
+
+We keep information only as long as we have a reason to. Some of it has no fixed deletion date, as shown below.
+
+- Account information: Until you delete your account.
+- Your invoice list in the dashboard: Until you delete your account.
+- Our invoice records, including encrypted private keys and invoice_data: Kept after account deletion, with no fixed deletion date. We need them to recover late payments, handle security issues and meet legal duties.
+- Backups of invoice records: Until they are replaced or deleted. Private keys stay encrypted in backups.
+- Operational logs and alerts: For as long as our hosting and messaging providers keep them, or until we remove them.
+- Rate limiting data: Short-lived, usually minutes to about an hour.
+- Browser storage: Until you log out or clear your browser's data.
+- Messages you send us: For as long as needed to deal with them, and as required by law.
+
+
+9. DELETING YOUR ACCOUNT
+
+9.1 You can delete your account from the Account page in the dashboard. Deletion removes your API key, webhook URL, webhook secret, payout addresses and your invoice list. Your account number and API key then stop working.
+
+9.2 We refuse deletion while an invoice is still open, or while a paid invoice hasn't reached you. This protects your money and your customers'.
+
+9.3 Deletion doesn't remove the invoice records described in section 8, existing backups, logs held by providers, or anything recorded on a blockchain.
+
+9.4 We can't restore a deleted account.
+
+
+10. SECURITY
+
+10.1 We encrypt the private key of each invoice address. Our database is accessible only with administrator credentials, the site and API use encrypted connections, and we apply rate limits and bot protection.
+
+10.2 Your account number is your only login, so anyone who has it can control your account. Keep it private, and replace your API key or webhook secret if you think one has been exposed.
+
+10.3 No system is completely secure, and we can't guarantee that your information will never be accessed without permission.
+
+10.4 Because we don't collect email addresses, we may not be able to contact you directly about a security incident. We will post any notice we are required to give on the Service, and we will notify the authorities where the law requires it.
+
+
+11. PUBLIC BLOCKCHAINS
+
+Addresses, amounts and transactions are permanently visible on public blockchains. Mintage doesn't control those networks and can't change or delete what is recorded on them. Someone may be able to link blockchain activity to you or your customers, for example through an address you have shared publicly.
+
+
+12. INTERNATIONAL TRANSFERS
+
+Mintage and its providers may process information in the United States and other countries, which may have different privacy laws from where you live. Where the law requires it, we rely on appropriate safeguards for these transfers, such as the standard contractual clauses offered by our providers.
+
+
+13. YOUR RIGHTS
+
+13.1 Depending on where you live, you may have the right to:
+
+- ask what information we hold about you and get a copy;
+- correct information that is wrong;
+- delete your information;
+- restrict or object to how we use it;
+- receive your information in a portable format; and
+- complain to your local data protection authority.
+
+13.2 California residents may also have the right to know what we collect and how we use and share it, to ask us to delete or correct it, and not to be treated unfairly for using these rights. We don't sell personal information or share it for cross-context behavioural advertising.
+
+13.3 Using your rights. You can view and change much of your information in the dashboard, and you can delete your account there. For anything else, contact us at support@mintage.cc. You can also ask someone to make a request for you where the law allows it.
+
+13.4 Confirming it's you. Because we don't collect names or email addresses, we may need you to prove control of the account or invoice involved. Please don't send your full account number in a message unless we ask for it through a secure method. We may not be able to act on a request if we can't confirm that the information is yours.
+
+13.5 Limits on these rights. We may keep information where the law requires or allows it, including to recover funds, handle security issues or deal with legal claims. Nobody can change or delete blockchain records.
+
+
+14. CHILDREN
+
+The Service isn't for anyone under 18, and we don't knowingly collect information from children. If you believe a child has given us information, contact us and we will deal with it as the law requires.
+
+
+15. CHANGES TO THIS POLICY
+
+We may update this policy. Because we don't collect email addresses, we will post the new version on this page and change its effective date. For a material change, we will also give at least 30 days' notice on the Service, unless a legal or security reason requires a faster change.
+
+
+16. CONTACT
+
+You can contact Mintage about this policy at support@mintage.cc.

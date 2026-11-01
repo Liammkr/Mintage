@@ -14,6 +14,8 @@ import Transactions from "./pages/Dashboard/Transactions/Transactions.tsx";
 import Wallets from "./pages/Dashboard/Wallets/Wallets.tsx";
 import Account from "./pages/Dashboard/Account/Account.tsx";
 import API from "./pages/Dashboard/API/API.tsx";
+import Terms from "./pages/Terms/Terms.tsx";
+import Privacy from "./pages/Privacy/Privacy.tsx";
 import { Toaster } from "sonner";
 import { useResolvedTheme } from "./theme";
 
@@ -36,6 +38,8 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/dashboard/account" element={<Account />} />
         <Route path="/dashboard/api" element={<API />} />
         <Route path="/dashboard/overview" element={<Transactions />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
         <Route path="*" element={<Fourofour />} />
       </Routes>
     </BrowserRouter>

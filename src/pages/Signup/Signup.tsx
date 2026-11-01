@@ -84,7 +84,7 @@ function Signup() {
                   Terms of Service
                 </a>{" "}
                 and{" "}
-                <a onClick={() => navigate("/policy")} className="legaltext">
+                <a onClick={() => navigate("/privacy")} className="legaltext">
                   Privacy Policy
                 </a>
                 .
