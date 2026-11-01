@@ -48,33 +48,46 @@
 :root[data-theme="dark"] {
   color-scheme: dark;
 
+  /*brand*/
+  --color-brand: rgb(145, 130, 245);
+  --color-brand-hover: rgb(122, 132, 245);
+
   /*texts*/
-  --color-text: rgb(240, 240, 245);
-  --color-text-soft: rgb(205, 207, 216);
-  --color-text-muted: rgb(160, 163, 176);
-  --color-placeholder: rgb(140, 143, 156);
-  --color-icon-hover: rgb(129, 160, 255);
+  --color-text: #f2f3f5;
+  --color-text-soft: #cdd0d6;
+  --color-text-muted: #9ca3b0;
+  --color-text-inverse: #111214;
+  --color-placeholder: #7c8391;
+  --color-icon-hover: #60a5fa;
 
   /*backgrounds/borders*/
-  --color-bg: rgb(17, 17, 22);
-  --color-surface: rgb(26, 26, 33);
-  --color-surface-hover: rgb(38, 38, 47);
-  --color-button-hover: rgb(38, 38, 47);
-  --color-border: rgb(46, 46, 56);
-  --color-border-strong: rgb(86, 86, 100);
-  --color-coin-fallback: rgb(56, 56, 66);
+  --color-bg: #1a1b20;
+  --color-surface: rgb(36, 37, 43);
+  --color-surface-hover: rgb(46, 47, 54);
+  --color-button-hover: rgb(44, 45, 51);
+  --color-border: rgb(50, 52, 59);
+  --color-border-strong: rgb(92, 95, 104);
+  --color-coin-fallback: #3a3b42;
 
   /*dashboard/blackbuttons*/
-  --color-dark: rgb(52, 52, 62);
-  --color-dark-hover: rgb(66, 66, 78);
+  --color-dark: #f2f3f5;
+  --color-dark-hover: rgb(217, 219, 224);
 
   /*allstatuscolors*/
-  --color-success: rgb(74, 222, 128);
-  --color-success-bg: rgb(20, 46, 33);
-  --color-danger: rgb(248, 113, 113);
-  --color-danger-bg: rgb(58, 24, 24);
-  --color-info: rgb(165, 160, 255);
-  --color-info-bg: rgb(33, 31, 68);
-  --color-warning: rgb(251, 191, 36);
-  --color-warning-bg: rgb(58, 40, 12);
+  --color-success: #4ade80;
+  --color-success-bg: rgb(28, 48, 38);
+  --color-danger: #f87171;
+  --color-danger-bg: rgb(56, 30, 32);
+  --color-info: #a5b4fc;
+  --color-info-bg: rgb(36, 36, 62);
+  --color-warning: #fbbf24;
+  --color-warning-bg: rgb(56, 44, 24);
+
+  /*fonts*/
+  --font-sans:
+    "Geist Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    sans-serif;
+  --font-mono:
+    "Geist Mono Variable", ui-monospace, SFMono-Regular, Menlo, Consolas,
+    monospace;
 }
