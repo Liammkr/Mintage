@@ -1,7 +1,9 @@
 import "./Logo.css";
 import { useNavigate } from "react-router-dom";
+import { useResolvedTheme } from "../theme";
 export function LogoImg({ size = 30 }: { size?: number }) {
   const navigate = useNavigate();
+  const theme = useResolvedTheme();
   return (
     <a onClick={() => navigate("/")}>
       <svg
@@ -11,7 +13,11 @@ export function LogoImg({ size = 30 }: { size?: number }) {
         onClick={() => navigate("/")}
         style={{ cursor: "pointer" }}
       >
-        <image href="/mintage_black.png" width={"100%"} height={"100%"} />
+        <image
+          href={theme === "dark" ? "/mintage_white.png" : "/mintage_black.png"}
+          width={"100%"}
+          height={"100%"}
+        />
       </svg>
     </a>
   );

@@ -1,4 +1,6 @@
 :root {
+  color-scheme: light;
+
   /*brand*/
   --color-brand: rgb(129, 112, 240);
   --color-brand-hover: rgb(100, 112, 240);
@@ -41,4 +43,38 @@
   --font-mono:
     "Geist Mono Variable", ui-monospace, SFMono-Regular, Menlo, Consolas,
     monospace;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  /*texts*/
+  --color-text: rgb(240, 240, 245);
+  --color-text-soft: rgb(205, 207, 216);
+  --color-text-muted: rgb(160, 163, 176);
+  --color-placeholder: rgb(140, 143, 156);
+  --color-icon-hover: rgb(129, 160, 255);
+
+  /*backgrounds/borders*/
+  --color-bg: rgb(17, 17, 22);
+  --color-surface: rgb(26, 26, 33);
+  --color-surface-hover: rgb(38, 38, 47);
+  --color-button-hover: rgb(38, 38, 47);
+  --color-border: rgb(46, 46, 56);
+  --color-border-strong: rgb(86, 86, 100);
+  --color-coin-fallback: rgb(56, 56, 66);
+
+  /*dashboard/blackbuttons*/
+  --color-dark: rgb(52, 52, 62);
+  --color-dark-hover: rgb(66, 66, 78);
+
+  /*allstatuscolors*/
+  --color-success: rgb(74, 222, 128);
+  --color-success-bg: rgb(20, 46, 33);
+  --color-danger: rgb(248, 113, 113);
+  --color-danger-bg: rgb(58, 24, 24);
+  --color-info: rgb(165, 160, 255);
+  --color-info-bg: rgb(33, 31, 68);
+  --color-warning: rgb(251, 191, 36);
+  --color-warning-bg: rgb(58, 40, 12);
 }

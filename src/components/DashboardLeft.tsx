@@ -22,7 +22,8 @@ export default function DashboardLeft() {
     window.location.href = "/signin";
   }
   function logoutofacc() {
-    localStorage.clear();
+    localStorage.removeItem("user_id");
+    localStorage.removeItem("api_key");
     toast.success("Logged Out");
     navigate("/");
   }

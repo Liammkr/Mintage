@@ -15,10 +15,17 @@ import Wallets from "./pages/Dashboard/Wallets/Wallets.tsx";
 import Account from "./pages/Dashboard/Account/Account.tsx";
 
 import { Toaster } from "sonner";
+import { useResolvedTheme } from "./theme";
+
+function ThemedToaster() {
+  const theme = useResolvedTheme();
+  return <Toaster position="top-right" theme={theme} richColors closeButton />;
+}
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
-      <Toaster position="top-right" theme="light" richColors closeButton />
+      <ThemedToaster />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/docs" element={<Docs />} />

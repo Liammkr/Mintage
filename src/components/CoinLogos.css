@@ -23,3 +23,7 @@
   font-size: 10px;
   font-weight: 600;
 }
+
+[data-theme="dark"] .coinLogo > svg[aria-label^="eth" i] {
+  filter: invert(1);
+}
