@@ -229,8 +229,6 @@
   }
 }
 
-/* the transactions table has too many columns once space runs out, so each row becomes a card.
-   the columns' headers are hidden, so the two values that need a label get one from css */
 @media (max-width: 1100px) {
   body .tableKeyList324 {
     display: none;
@@ -316,7 +314,6 @@
   }
 }
 
-/* the dashboard sidebar becomes a bar of tabs along the bottom of the screen */
 @media (max-width: 900px) {
   html:has(.no-scroll-page),
   body:has(.no-scroll-page) {
@@ -340,7 +337,6 @@
     border-top: 1px solid var(--color-border);
     background-color: var(--color-bg);
   }
-  /* the logo, section titles and account box don't fit. the account page has the number and log out */
   body .leftsidebardashboard > a,
   body .sidebardescriptions,
   body .bottomacctnumb {
@@ -363,17 +359,16 @@
     width: 20px;
     height: 20px;
   }
-  /* the sidebar has no active state, so the current tab comes from which page is showing.
-     the numbers are each link's position in DashboardLeft.tsx */
   body .fulldashboard:has(.overviewRight) .sidebartexts:nth-child(3),
   body .fulldashboard:has(.walletsright) .sidebartexts:nth-child(5),
   body .fulldashboard:has(.apirow) .sidebartexts:nth-child(6),
-  body .fulldashboard:has(.accountright):not(:has(.apirow)) .sidebartexts:nth-child(7) {
+  body
+    .fulldashboard:has(.accountright):not(:has(.apirow))
+    .sidebartexts:nth-child(7) {
     color: var(--color-brand);
     font-weight: 500;
   }
 
-  /* room for the tabs under each page, which scrolls inside its own box */
   body .overviewRight,
   body .walletsright,
   body .accountright {
@@ -393,7 +388,6 @@
   }
 }
 
-/* phones */
 @media (max-width: 600px) {
   body .completeWrap {
     width: auto;
@@ -450,7 +444,6 @@
     height: 48px;
   }
 
-  /* 16px stops iphones zooming the page in when one of these is focused */
   body .walletaddress,
   body .apiurlinput,
   body .accountconfirminput {
@@ -515,7 +508,6 @@
     align-self: stretch;
   }
 
-  /* bigger tap areas without making the icons look any bigger */
   body .copytextbutton,
   body .openinnewwindow {
     box-sizing: content-box;
@@ -526,7 +518,6 @@
   }
 }
 
-/* cloudflare's sign in check is always 300px wide, so the card gives up its border to fit it */
 @media (max-width: 360px) {
   body .completeWrap {
     padding-left: 10px;
@@ -550,7 +541,6 @@
   }
 }
 
-/* account rows line up to the left at this size, these need the row's full width */
 @media (max-width: 1000px) {
   body .accountrow.apirow {
     justify-items: stretch;
@@ -561,7 +551,6 @@
   }
 }
 
-/* touch screens wider than a phone, like tablets, still need room for a finger */
 @media (pointer: coarse) {
   body .accountbutton,
   body .apiurlinput,
