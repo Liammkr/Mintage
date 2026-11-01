@@ -23,7 +23,6 @@ export default function DashboardLeft() {
   }
   function logoutofacc() {
     localStorage.removeItem("user_id");
-    localStorage.removeItem("api_key");
     toast.success("Logged Out");
     navigate("/");
   }
@@ -47,11 +46,8 @@ export default function DashboardLeft() {
       >
         <MdOutlineAccountBalanceWallet></MdOutlineAccountBalanceWallet>Wallets
       </p>
-      <p
-        className="sidebartexts"
-        onClick={() => navigate("/dashboard/webhooks")}
-      >
-        <MdCode></MdCode>Webhooks
+      <p className="sidebartexts" onClick={() => navigate("/dashboard/api")}>
+        <MdCode></MdCode>Developer
       </p>
       <p
         className="sidebartexts"

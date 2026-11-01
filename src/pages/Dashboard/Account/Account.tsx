@@ -19,7 +19,6 @@ const themeOptions = [
 
 function clearSession() {
   localStorage.removeItem("user_id");
-  localStorage.removeItem("api_key");
 }
 
 function Account() {

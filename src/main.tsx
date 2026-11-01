@@ -13,7 +13,7 @@ import Fourofour from "./pages/404/404.tsx";
 import Transactions from "./pages/Dashboard/Transactions/Transactions.tsx";
 import Wallets from "./pages/Dashboard/Wallets/Wallets.tsx";
 import Account from "./pages/Dashboard/Account/Account.tsx";
-
+import API from "./pages/Dashboard/API/API.tsx";
 import { Toaster } from "sonner";
 import { useResolvedTheme } from "./theme";
 
@@ -34,7 +34,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/dashboard/transactions" element={<Transactions />} />
         <Route path="/dashboard/wallets" element={<Wallets />} />
         <Route path="/dashboard/account" element={<Account />} />
-        <Route path="/dashboard/*" element={<Transactions />} />
+        <Route path="/dashboard/api" element={<API />} />
         <Route path="*" element={<Fourofour />} />
       </Routes>
     </BrowserRouter>

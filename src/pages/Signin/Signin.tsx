@@ -49,7 +49,6 @@ function Signin() {
       }
 
       localStorage.setItem("user_id", data.user_id);
-      localStorage.setItem("api_key", data.api_key);
       toast.success("Signed in");
       navigate("/dashboard/overview");
     } catch (err) {

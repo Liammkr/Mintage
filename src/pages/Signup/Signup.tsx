@@ -43,7 +43,6 @@ function Signup() {
 
       toast.success("Account Created");
       localStorage.setItem("user_id", data.user_id);
-      localStorage.setItem("api_key", data.api_key);
       document.getElementById("one")?.style.setProperty("display", "none");
       document.getElementById("two")?.style.setProperty("display", "flex");
     } catch (err) {
