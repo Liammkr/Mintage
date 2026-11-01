@@ -1,11 +1,5 @@
 body {
-  font-family:
-    "Geist Variable",
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    sans-serif;
+  font-family: var(--font-sans);
   overflow-x: hidden;
 }
 html:has(.no-scroll-page),

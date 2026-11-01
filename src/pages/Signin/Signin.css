@@ -4,7 +4,7 @@
   flex-direction: column;
 }
 .signupCard {
-  border: 2px solid rgb(229, 231, 236);
+  border: 2px solid var(--color-border);
   border-radius: 5px;
   padding: 20px;
   width: 350px;
@@ -14,11 +14,11 @@
   margin: 10px;
   width: 90%;
   height: 40px;
-  border: 2px solid rgb(105, 92, 187);
+  border: 2px solid var(--color-brand-hover);
   border-radius: 5px;
-  background-color: rgb(129, 112, 240);
+  background-color: var(--color-brand);
   transition: background-color 0.3s ease;
-  color: white;
+  color: var(--color-text-inverse);
   cursor: pointer;
 }
 .createAccText:disabled {
@@ -26,7 +26,7 @@
   cursor: not-allowed;
 }
 .createAccText:hover {
-  background-color: rgb(105, 92, 187);
+  background-color: var(--color-brand-hover);
 }
 .bottomSignin {
   display: flex;
@@ -39,7 +39,7 @@
   margin-top: 0px;
 }
 .asignin {
-  color: rgb(129, 112, 240);
+  color: var(--color-brand);
   cursor: pointer;
   margin-top: 0px;
   text-decoration: none;
@@ -50,7 +50,7 @@
 }
 .legaltext {
   text-decoration: none;
-  color: rgb(129, 112, 240);
+  color: var(--color-brand);
 }
 .cardwrapper {
   display: flex;
@@ -69,16 +69,14 @@
   padding-right: 7.5%;
 }
 .inputtext {
-  border: 2px solid rgb(129, 112, 240);
+  border: 2px solid var(--color-brand);
   border-radius: 5px;
   width: 100%;
   box-sizing: border-box;
   height: 50px;
   text-align: center;
   font-size: 23px;
-  font-family:
-    "Geist Mono Variable", ui-monospace, SFMono-Regular, Menlo, Consolas,
-    monospace;
+  font-family: var(--font-mono);
 }
 .inputwrap {
   width: 350px;

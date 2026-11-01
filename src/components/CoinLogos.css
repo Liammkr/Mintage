@@ -10,7 +10,7 @@
   bottom: -4px;
   display: flex;
   border-radius: 50%;
-  background: #ffff;
+  background: var(--color-bg);
   padding: 1px;
 }
 
@@ -19,7 +19,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #e5e5e5;
+  background: var(--color-coin-fallback);
   font-size: 10px;
   font-weight: 600;
 }

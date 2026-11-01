@@ -6,7 +6,7 @@
   display: block;
   font-size: 11px;
   cursor: pointer;
-  color: black;
+  color: var(--color-text);
   text-decoration: none;
   padding-bottom: 11px;
 }

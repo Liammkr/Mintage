@@ -1,0 +1,44 @@
+:root {
+  /*brand*/
+  --color-brand: rgb(129, 112, 240);
+  --color-brand-hover: rgb(100, 112, 240);
+
+  /*texts*/
+  --color-text: #000;
+  --color-text-soft: #2b303b;
+  --color-text-muted: #454d5e;
+  --color-text-inverse: #fff;
+  --color-placeholder: #6b7280;
+  --color-icon-hover: #2563eb;
+
+  /*backgrounds/borders*/
+  --color-bg: #fff;
+  --color-surface: rgb(246, 247, 249);
+  --color-surface-hover: rgb(235, 236, 240);
+  --color-button-hover: rgb(238, 238, 238);
+  --color-border: rgb(229, 231, 236);
+  --color-border-strong: rgb(171, 171, 171);
+  --color-coin-fallback: #e5e5e5;
+
+  /*dashboard/blackbuttons*/
+  --color-dark: #000;
+  --color-dark-hover: rgb(42, 42, 42);
+
+  /*allstatuscolors*/
+  --color-success: #15803d;
+  --color-success-bg: rgb(230, 246, 239);
+  --color-danger: #b91c1c;
+  --color-danger-bg: #feeeee;
+  --color-info: #4338ca;
+  --color-info-bg: #eeeefe;
+  --color-warning: #b45309;
+  --color-warning-bg: #fff7e8;
+
+  /*fonts*/
+  --font-sans:
+    "Geist Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    sans-serif;
+  --font-mono:
+    "Geist Mono Variable", ui-monospace, SFMono-Regular, Menlo, Consolas,
+    monospace;
+}

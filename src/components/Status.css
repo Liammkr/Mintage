@@ -25,28 +25,28 @@
 }
 
 .status.confirmed {
-  background: rgb(230, 246, 239);
-  color: #15803d;
-  border-color: #15803d;
+  background: var(--color-success-bg);
+  color: var(--color-success);
+  border-color: var(--color-success);
 }
 .status.confirming {
-  background: #eeeefe;
-  color: #4338ca;
-  border-color: #4338ca;
+  background: var(--color-info-bg);
+  color: var(--color-info);
+  border-color: var(--color-info);
 }
 .status.expired {
-  background: #feeeee;
-  color: #b91c1c;
-  border-color: #b91c1c;
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+  border-color: var(--color-danger);
 }
 
 .status.pending {
-  background: rgb(246, 247, 249);
-  color: #454d5e;
-  border-color: #454d5e;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  border-color: var(--color-text-muted);
 }
 .status.underpaid {
-  background: #fff7e8;
-  color: #b45309;
-  border-color: #b45309;
+  background: var(--color-warning-bg);
+  color: var(--color-warning);
+  border-color: var(--color-warning);
 }

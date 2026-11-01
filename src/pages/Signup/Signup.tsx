@@ -99,7 +99,7 @@ function Signup() {
             </div>
           </div>
 
-          <div className="cardwrapper" id="two" style={{ display: "block" }}>
+          <div className="cardwrapper" id="two" style={{ display: "none" }}>
             <div className="signupCard">
               <LogoImg />
               <div className="inputwrap">

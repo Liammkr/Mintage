@@ -7,3 +7,8 @@
   display: flex;
   flex-direction: column;
 }
+.accountoutline {
+  border: 1px solid red;
+}
+.acctnumberinaccount {
+}

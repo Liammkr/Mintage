@@ -36,19 +36,19 @@
   border-radius: 10px;
   padding: 15px;
   height: 40px;
-  background-color: rgb(129, 112, 240);
-  color: white;
-  border: 1px solid rgb(100, 112, 240);
+  background-color: var(--color-brand);
+  color: var(--color-text-inverse);
+  border: 1px solid var(--color-brand-hover);
   transition: background-color 0.3s ease;
   cursor: pointer;
 }
 .createinvbutton:hover {
-  background-color: rgb(100, 112, 240);
+  background-color: var(--color-brand-hover);
 }
 .maintransactionchart {
   height: 100%;
   width: 100%;
-  border: 2px solid rgb(229, 231, 236);
+  border: 2px solid var(--color-border);
   border-radius: 10px;
   flex: 1;
   min-height: 0;
@@ -66,7 +66,7 @@
   padding-left: 15px;
   padding-right: 15px;
   height: 30px;
-  background-color: rgb(246, 247, 249);
+  background-color: var(--color-surface);
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   position: sticky;
@@ -78,13 +78,11 @@
   align-items: center;
   grid-template-columns: 1.2fr 0.8fr 0.5fr 0.5fr 0.5fr 0.4fr 1fr 0.1fr;
   font-size: 12px;
-  border-top: 1px solid rgb(229, 231, 236);
+  border-top: 1px solid var(--color-border);
   padding-left: 15px;
   padding-right: 15px;
   height: 50px;
-  font-family:
-    "Geist Mono Variable", ui-monospace, SFMono-Regular, Menlo, Consolas,
-    monospace;
+  font-family: var(--font-mono);
 }
 .coinColumn324 {
   align-items: center;
@@ -103,7 +101,7 @@
   cursor: pointer;
 }
 .copytextbutton:hover {
-  background-color: rgb(229, 231, 236);
+  background-color: var(--color-border);
 }
 .openinnewwindow {
   transition: background-color 0.3s ease;
@@ -112,25 +110,25 @@
   cursor: pointer;
 }
 .openinnewwindow:hover {
-  background-color: rgb(229, 231, 236);
+  background-color: var(--color-border);
 }
 .withdrwantstatus.withdrawn {
   padding: 6px;
-  border: 1px solid #15803d;
+  border: 1px solid var(--color-success);
   border-radius: 5px;
-  background-color: rgb(230, 246, 239);
-  color: #15803d;
+  background-color: var(--color-success-bg);
+  color: var(--color-success);
 }
 .withdrwantstatus.notwithdrawn {
   padding: 6px;
-  border: 1px solid #b91c1c;
+  border: 1px solid var(--color-danger);
   border-radius: 5px;
-  background-color: #feeeee;
-  color: #b91c1c;
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger);
 }
 .confirmationstableentry {
   padding: 6px;
-  border: 1px solid rgb(229, 231, 236);
+  border: 1px solid var(--color-border);
   border-radius: 5px;
   width: 30px;
   text-align: center;
@@ -142,15 +140,15 @@
   border-radius: 10px;
   padding: 15px;
   height: 40px;
-  background-color: rgb(129, 112, 240);
-  color: white;
-  border: 1px solid rgb(100, 112, 240);
+  background-color: var(--color-brand);
+  color: var(--color-text-inverse);
+  border: 1px solid var(--color-brand-hover);
   transition: background-color 0.3s ease;
   cursor: pointer;
 }
 
 .refrecttransbutton:hover {
-  background-color: rgb(100, 112, 240);
+  background-color: var(--color-brand-hover);
 }
 .righthandbuttonsontransactions {
   display: flex;
@@ -162,9 +160,9 @@
   border-radius: 4px;
   background: linear-gradient(
     90deg,
-    rgb(229, 231, 236) 25%,
-    rgb(246, 247, 249) 50%,
-    rgb(229, 231, 236) 75%
+    var(--color-border) 25%,
+    var(--color-surface) 50%,
+    var(--color-border) 75%
   );
   background-size: 200% 100%;
   animation: skeletonShimmer 1.4s linear infinite;
@@ -186,7 +184,7 @@
   margin: 0;
   padding: 40px 15px;
   font-size: 13px;
-  color: #454d5e;
+  color: var(--color-text-muted);
   text-align: center;
 }
 .refrecttransbutton:disabled {

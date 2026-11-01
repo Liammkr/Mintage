@@ -13,7 +13,6 @@
 }
 .bubbleside {
   height: 30px;
-  text-align: center;
   border: 1px solid transparent;
   font-weight: 300;
   font-size: 12px;
@@ -22,20 +21,18 @@
   padding-left: 10px;
   display: flex;
   margin: 0px;
-  height: 30px;
   border-radius: 8px;
   margin-bottom: 2px;
   transition: background-color 0.3s ease;
   cursor: pointer;
   text-decoration: none;
-  color: black;
+  color: var(--color-text);
 }
 .bubbleside:hover {
-  background-color: rgb(235, 236, 240);
+  background-color: var(--color-surface-hover);
 }
 .mainbubble {
   height: 30px;
-  text-align: center;
   width: 150px;
   font-size: 12px;
   text-align: left;
@@ -44,10 +41,9 @@
   padding-bottom: 0px;
   display: flex;
   margin: 0px;
-  height: 30px;
 }
 .docsRightSide {
-  border: 2px solid rgb(229, 231, 236);
+  border: 2px solid var(--color-border);
   width: 100%;
   border-radius: 5px;
   padding: 32px 40px;
@@ -58,7 +54,7 @@
   scroll-margin-top: 20px;
   padding-bottom: 32px;
   margin-bottom: 32px;
-  border-bottom: 1px solid rgb(229, 231, 236);
+  border-bottom: 1px solid var(--color-border);
 }
 .docsSection:last-child {
   border-bottom: none;
@@ -87,30 +83,19 @@
 .docsSection li {
   font-size: 15px;
   line-height: 1.6;
-  color: #2b303b;
+  color: var(--color-text-soft);
 }
 .docsSection li {
   margin-bottom: 6px;
 }
-.docsSection a {
-  color: rgb(129, 112, 240);
-}
 .docsRightSide code {
-  font-family:
-    "Geist Mono Variable", ui-monospace, SFMono-Regular, Menlo, Consolas,
-    monospace;
+  font-family: var(--font-mono);
   font-size: 0.88em;
-  background-color: rgb(246, 247, 249);
-  border: 1px solid rgb(229, 231, 236);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 5px;
   padding: 1px 5px;
   overflow-wrap: anywhere;
-}
-.docsNote {
-  border: 1px solid rgb(221, 216, 252);
-  background-color: rgb(244, 242, 254);
-  border-radius: 8px;
-  padding: 12px 16px;
 }
 .endpoint {
   display: flex;
@@ -121,8 +106,8 @@
   font-size: 14px;
 }
 .method {
-  background-color: rgb(129, 112, 240);
-  color: white;
+  background-color: var(--color-brand);
+  color: var(--color-text-inverse);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.03em;
@@ -130,18 +115,18 @@
   border-radius: 5px;
 }
 .codeBlock {
-  border: 1px solid rgb(229, 231, 236);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
-  background-color: rgb(246, 247, 249);
+  background-color: var(--color-surface);
   overflow: hidden;
   margin-top: 12px;
   margin-bottom: 16px;
 }
 .codeLabel {
   font-size: 12px;
-  color: #454d5e;
-  background-color: white;
-  border-bottom: 1px solid rgb(229, 231, 236);
+  color: var(--color-text-muted);
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
   padding: 8px 14px;
 }
 .codeBlock pre {
@@ -160,7 +145,7 @@
 }
 .tableScroll {
   overflow-x: auto;
-  border: 1px solid rgb(229, 231, 236);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   margin-top: 12px;
   margin-bottom: 16px;
@@ -174,13 +159,13 @@
   text-align: left;
   font-weight: 500;
   font-size: 12px;
-  color: #454d5e;
-  background-color: rgb(246, 247, 249);
+  color: var(--color-text-muted);
+  background-color: var(--color-surface);
   padding: 8px 12px;
   white-space: nowrap;
 }
 .docsTable td {
-  border-top: 1px solid rgb(229, 231, 236);
+  border-top: 1px solid var(--color-border);
   padding: 10px 12px;
   line-height: 1.5;
   vertical-align: top;

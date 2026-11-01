@@ -14,6 +14,9 @@ function Account() {
             </p>
           </div>
         </div>
+        <div className="accountoutline">
+          <div className="acctnumberinaccount"></div>
+        </div>
       </div>
     </div>
   );

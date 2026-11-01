@@ -1,6 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "@fontsource-variable/geist";
+import "@fontsource-variable/geist-mono";
+import "./theme.css";
 import "./index.css";
 import Home from "./pages/Home/Home.tsx";
 import Docs from "./pages/Docs/Docs.tsx";
